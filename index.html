@@ -105,8 +105,8 @@ section{padding:68px 5vw}
 footer{background:#0a0600;color:#7a6040;text-align:center;padding:24px;font-size:.78rem;letter-spacing:.04em}
 
 /* GATE FORM */
-#gate-overlay{position:fixed;inset:0;z-index:99999;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(8,5,0,.97) 0%,rgba(44,62,80,.97) 100%);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:20px}
-#gate-overlay.hidden{display:none}
+#gate-overlay{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(8,5,0,.97) 0%,rgba(44,62,80,.97) 100%);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:20px}
+html.show-gate #gate-overlay{display:flex}html.show-gate body{overflow:hidden}
 .gate-card{background:#fdfcf7;width:100%;max-width:440px;padding:44px 40px 38px;box-shadow:0 32px 80px rgba(0,0,0,.45);position:relative;border-top:4px solid #C9A84C;animation:gateIn .55s cubic-bezier(.22,1,.36,1) both}
 @keyframes gateIn{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
 @media(max-width:480px){.gate-card{padding:32px 24px 28px}}
@@ -126,6 +126,7 @@ footer{background:#0a0600;color:#7a6040;text-align:center;padding:24px;font-size
 .gate-btn:hover{background:#C9A84C}
 .gate-note{text-align:center;margin-top:14px;font-size:.72rem;color:#a09080;font-weight:300}
 </style>
+<script>if(!localStorage.getItem('gsInteriorVisited'))document.documentElement.classList.add('show-gate');</script>
 </head>
 <body>
 
@@ -275,15 +276,6 @@ if(window.innerWidth>768){
 }
 
 // Gate form logic
-(function(){
-  if(localStorage.getItem('gsInteriorVisited')){
-    var el=document.getElementById('gate-overlay');
-    if(el)el.classList.add('hidden');
-    document.body.style.overflow='';
-  } else {
-    document.body.style.overflow='hidden';
-  }
-})();
 function gateSubmit(){
   var name=document.getElementById('gate-name').value.trim();
   var phone=document.getElementById('gate-phone').value.trim();
