@@ -141,6 +141,12 @@ function showDashboard(){
 
 function loadVisitors(){
   var log=JSON.parse(localStorage.getItem(LOG_KEY)||'[]');
+  var single=JSON.parse(localStorage.getItem('gsInteriorVisited')||'null');
+  if(single&&single.name&&single.phone&&single.ts){
+    var already=log.some(function(v){return v.ts===single.ts;});
+    if(!already)log=log.concat([single]);
+  }
+  log.sort(function(a,b){return a.ts-b.ts;});
   var tbody=document.getElementById('visitors-tbody');
   var chip=document.getElementById('total-count');
   chip.textContent=log.length+' visitor'+(log.length!==1?'s':'');
