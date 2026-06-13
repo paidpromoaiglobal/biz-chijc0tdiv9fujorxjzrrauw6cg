@@ -292,6 +292,25 @@ function gateSubmit(){
   var _log=JSON.parse(localStorage.getItem('gsVisitorLog')||'[]');
   _log.push({name:name,phone:phone,ts:_ts});
   localStorage.setItem('gsVisitorLog',JSON.stringify(_log));
+  // Send email notification via Web3Forms
+  (function(n,p,t){
+    var d=new Date(t);
+    var ds=d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear();
+    var ts=d.getHours()+':'+('0'+d.getMinutes()).slice(-2);
+    var msg='New visitor filled the entry form on G-Space Interiors.\n\nName: '+n+'\nPhone: '+p+'\nDate: '+ds+'\nTime: '+ts;
+    fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify({
+        access_key:'6d3f842e-8912-4c81-b732-f0ef31b5d9e3',
+        subject:'New Visitor — G-Space Interiors',
+        from_name:'G-Space Interiors Website',
+        name:n,
+        email:'kailashinfosoft@gmail.com',
+        message:msg
+      })
+    }).catch(function(){});
+  })(name,phone,_ts);
   var overlay=document.getElementById('gate-overlay');
   overlay.style.transition='opacity .4s ease';
   overlay.style.opacity='0';
