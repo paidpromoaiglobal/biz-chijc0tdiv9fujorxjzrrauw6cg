@@ -287,7 +287,11 @@ function gateSubmit(){
   if(!name){ne.classList.add('show');ok=false;}
   if(!/^[0-9]{10}$/.test(phone)){pe.classList.add('show');ok=false;}
   if(!ok)return;
-  localStorage.setItem('gsInteriorVisited',JSON.stringify({name:name,phone:phone,ts:Date.now()}));
+  var _ts=Date.now();
+  localStorage.setItem('gsInteriorVisited',JSON.stringify({name:name,phone:phone,ts:_ts}));
+  var _log=JSON.parse(localStorage.getItem('gsVisitorLog')||'[]');
+  _log.push({name:name,phone:phone,ts:_ts});
+  localStorage.setItem('gsVisitorLog',JSON.stringify(_log));
   var overlay=document.getElementById('gate-overlay');
   overlay.style.transition='opacity .4s ease';
   overlay.style.opacity='0';
