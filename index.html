@@ -3,328 +3,578 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#2C3E50">
-<title>G-Space Interiors Chennai | Custom Furniture &amp; Home Interior Services in Madambakkam</title>
-<meta name="description" content="G-Space Interiors in Madambakkam, Chennai offers expert interior design, custom wardrobes, modular kitchens, TV units, and complete home renovation services. Rated 5 stars by 76 customers. Call 07397 395 378.">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#1a0a00">
+<title>G-Space Interiors Chennai | Dream Home Interiors · 45 Days Move-In · Lifetime Warranty</title>
+<meta name="description" content="G-Space Interiors, Madambakkam Chennai — Luxury home interiors with 45-day move-in guarantee, lifetime warranty & no hidden costs. Modular kitchens, wardrobes, full home interiors. Call 07397 395 378.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;color:#1a1209;background:#fdfcf7;-webkit-font-smoothing:antialiased}
-.wa-fab{position:fixed;bottom:24px;right:24px;z-index:9999;background:#25d366;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,211,102,.5);text-decoration:none;transition:transform .2s,box-shadow .2s}.wa-fab:hover{transform:scale(1.1);box-shadow:0 8px 32px rgba(37,211,102,.6)}
-[data-r]{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease;}
-[data-r].r-in{opacity:1;transform:none;}
-[data-r][data-d="1"]{transition-delay:.1s;}[data-r][data-d="2"]{transition-delay:.22s;}
-[data-r][data-d="3"]{transition-delay:.34s;}[data-r][data-d="4"]{transition-delay:.46s;}
-[data-r][data-d="5"]{transition-delay:.58s;}[data-r][data-d="6"]{transition-delay:.70s;}
-.nav-s{box-shadow:0 2px 24px rgba(0,0,0,.12)!important;}
-nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(253,252,247,.97);backdrop-filter:blur(14px);border-bottom:1px solid #ede0c4;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;height:64px;transition:box-shadow .3s}
-.nav-brand{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:700;color:#2C3E50;letter-spacing:.06em}
-.nav-cta{background:#2C3E50;color:#fff;padding:9px 22px;border-radius:2px;text-decoration:none;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;transition:opacity .2s}
-.nav-cta:hover{opacity:.85}
-/* HERO */
-.hero{position:relative;height:100svh;min-height:600px;display:flex;align-items:center;overflow:hidden}
-.hero-bg{position:absolute;inset:-15%;width:130%;height:130%;background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AaVGc3mnyW3Iyk23-CwFDCZwEHeADoKKhZMIt3N3mM1dAiBsG7zZAz23SG90nfWU_PB2TOWV-VkV8iMR094ovqKbXMHCg7s8_3RmcYUrodeHMhan1YW_CJ8CnNFtrOrn5VoG4c8bLijKvLa3CzZQiIpypccnMc67NdinxW8ETUF8cf5wPWgcEdBtUzxQeHeojyRtd2HLyPnyIUJB9fhEeBnRrzeK9OT5X59limQw850HR3MqMzkpKdkUruNxoTR0ja1kEd_qXongRBane4QYsN0sTd66sbxOP9TrnUq7OpIUXepaMfiuR5dzQ8r5p28UVYvWcT1Rsf7orMrJp2QEL2zTJ6SHR96ZQ2VV7h18h60WIfeW1TzVgJu1Rf0lNgDYr73quzNnnU20Ko2zqgr41r_rokpfUkPhYpEQcGkYRyCZVG13l-aN&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs');background-size:cover;background-position:center;will-change:transform}
-.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(8,5,0,.92) 0%,rgba(8,5,0,.6) 55%,rgba(8,5,0,.15) 100%)}
-.hero-content{position:relative;z-index:2;padding:0 5vw;max-width:580px;color:#fff}
-.hero-eyebrow{font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;color:#C9A84C;margin-bottom:22px;font-weight:500}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,6vw,4rem);font-weight:700;line-height:1.15;margin-bottom:20px;letter-spacing:-.01em}
-.hero p{font-size:.97rem;opacity:.8;line-height:1.8;margin-bottom:32px;max-width:460px;font-weight:300}
+body{font-family:'Inter',sans-serif;color:#f5f0e8;background:#0f0700;-webkit-font-smoothing:antialiased}
+
+/* ── GATE OVERLAY ── */
+#gate{position:fixed;inset:0;z-index:99999;background:linear-gradient(160deg,#0f0700 0%,#1e1200 50%,#2a1500 100%);display:none;align-items:center;justify-content:center;padding:20px;overflow-y:auto}
+html.show-gate #gate{display:flex}
+html.show-gate body{overflow:hidden}
+.gate-wrap{width:100%;max-width:420px;animation:gateIn .6s cubic-bezier(.22,1,.36,1) both}
+@keyframes gateIn{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.gate-logo-row{text-align:center;margin-bottom:32px}
+.gate-logo-text{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:#C9A84C;letter-spacing:.1em;text-transform:uppercase}
+.gate-logo-sub{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-top:4px}
+.gate-badge{display:inline-block;background:#C9A84C;color:#0f0700;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 14px;border-radius:2px;margin-bottom:24px}
+.gate-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:#fff;line-height:1.2;margin-bottom:8px}
+.gate-title span{color:#C9A84C}
+.gate-sub{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.7;margin-bottom:28px;font-weight:300}
+.g-field{margin-bottom:14px}
+.g-label{display:block;font-size:.62rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#C9A84C;margin-bottom:7px}
+.g-input{width:100%;background:rgba(255,255,255,.05);border:1px solid rgba(201,168,76,.3);color:#f5f0e8;padding:13px 16px;font-size:.93rem;font-family:'Inter',sans-serif;outline:none;border-radius:2px;transition:border-color .2s;-webkit-appearance:none}
+.g-input:focus{border-color:#C9A84C;background:rgba(255,255,255,.08)}
+.g-input::placeholder{color:rgba(255,255,255,.25)}
+.g-err{font-size:.7rem;color:#e88;margin-top:4px;display:none}
+.g-err.show{display:block}
+.g-row{display:grid;grid-template-columns:auto 1fr;gap:10px}
+.g-prefix{background:rgba(255,255,255,.06);border:1px solid rgba(201,168,76,.3);border-right:none;color:#C9A84C;padding:13px 14px;font-size:.88rem;font-weight:600;border-radius:2px 0 0 2px;display:flex;align-items:center;gap:5px}
+.g-row .g-input{border-radius:0 2px 2px 0}
+.g-submit{width:100%;background:#C9A84C;color:#0f0700;border:none;padding:16px;font-family:'Inter',sans-serif;font-size:.85rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;border-radius:2px;margin-top:6px;transition:opacity .2s,transform .15s}
+.g-submit:hover{opacity:.88;transform:translateY(-1px)}
+.g-note{text-align:center;font-size:.68rem;color:rgba(255,255,255,.28);margin-top:14px;font-weight:300}
+.g-divider{border:none;border-top:1px solid rgba(201,168,76,.15);margin:24px 0}
+.g-trust-row{display:flex;justify-content:center;gap:24px;flex-wrap:wrap}
+.g-trust-item{text-align:center}
+.g-trust-n{font-family:'Playfair Display',serif;font-size:1.2rem;color:#C9A84C;font-weight:700;line-height:1}
+.g-trust-l{font-size:.6rem;color:rgba(255,255,255,.35);text-transform:uppercase;letter-spacing:.1em;margin-top:3px}
+
+/* ── NAV ── */
+.wa-fab{position:fixed;bottom:24px;right:24px;z-index:9998;background:#25d366;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 24px rgba(37,211,102,.5);text-decoration:none;transition:transform .2s}.wa-fab:hover{transform:scale(1.1)}
+[data-r]{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+[data-r].r-in{opacity:1;transform:none}
+[data-r][data-d="1"]{transition-delay:.1s}[data-r][data-d="2"]{transition-delay:.2s}[data-r][data-d="3"]{transition-delay:.3s}[data-r][data-d="4"]{transition-delay:.4s}[data-r][data-d="5"]{transition-delay:.5s}[data-r][data-d="6"]{transition-delay:.6s}
+.nav-s{box-shadow:0 2px 32px rgba(0,0,0,.5)!important}
+nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(15,7,0,.92);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);border-bottom:1px solid rgba(201,168,76,.15);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;height:64px;transition:box-shadow .3s}
+.nav-brand{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#C9A84C;letter-spacing:.08em}
+.nav-right{display:flex;align-items:center;gap:18px}
+.nav-link{color:rgba(255,255,255,.65);text-decoration:none;font-size:.78rem;font-weight:500;letter-spacing:.04em;transition:color .2s}
+.nav-link:hover{color:#C9A84C}
+.nav-cta{background:#C9A84C;color:#0f0700;padding:9px 22px;text-decoration:none;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:2px;transition:opacity .2s}
+.nav-cta:hover{opacity:.88}
+
+/* ── HERO ── */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:-15%;width:130%;height:130%;background-image:url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600&q=85&fit=crop&auto=format');background-size:cover;background-position:center;will-change:transform}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,4,0,.97) 0%,rgba(10,4,0,.65) 45%,rgba(10,4,0,.2) 100%)}
+.hero-inner{position:relative;z-index:2;padding:0 5vw 56px;width:100%;max-width:700px}
+.hero-chip{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.15);border:1px solid rgba(201,168,76,.4);padding:7px 16px;border-radius:2px;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:#C9A84C;margin-bottom:20px;backdrop-filter:blur(4px)}
+.offer-badge{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#8B1A1A,#C0392B);border:1px solid rgba(255,255,255,.15);padding:10px 20px;border-radius:2px;font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#fff;margin-bottom:16px}
+.offer-badge .pct{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:900;line-height:1}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,6vw,4rem);font-weight:900;line-height:1.08;margin-bottom:16px;letter-spacing:-.02em}
+.hero h1 em{color:#C9A84C;font-style:normal}
+.hero-tagline{font-size:clamp(.88rem,2vw,1rem);color:rgba(255,255,255,.72);line-height:1.75;margin-bottom:30px;font-weight:300;max-width:520px}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.hero-pill{background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.3);color:#C9A84C;font-size:.7rem;padding:6px 14px;border-radius:2px;font-weight:500;letter-spacing:.06em;text-transform:uppercase}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn-gold{background:#C9A84C;color:#fff;padding:14px 34px;text-decoration:none;font-weight:600;font-size:.84rem;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:opacity .2s,transform .15s}
-.btn-gold:hover{opacity:.9;transform:translateY(-2px)}
-.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;padding:13px 28px;text-decoration:none;font-size:.84rem;letter-spacing:.08em;text-transform:uppercase;border-radius:2px;transition:background .2s}
+.btn-gold{background:#C9A84C;color:#0f0700;padding:15px 36px;text-decoration:none;font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;border-radius:2px;transition:opacity .2s,transform .15s;display:inline-block}
+.btn-gold:hover{opacity:.88;transform:translateY(-2px)}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff;padding:14px 28px;text-decoration:none;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;transition:background .2s}
 .btn-ghost:hover{background:rgba(255,255,255,.08)}
-/* TRUST BAR */
-.trust-bar{background:#2C3E50;display:grid;grid-template-columns:repeat(2,1fr)}
-@media(min-width:640px){.trust-bar{grid-template-columns:repeat(4,1fr)}}
-.trust-item{padding:22px 16px;text-align:center;border-right:1px solid rgba(255,255,255,.08)}
-.trust-item:last-child{border:none}
-.trust-num{font-family:'Cormorant Garamond',serif;font-size:1.9rem;font-weight:700;color:#C9A84C;line-height:1}
-.trust-lbl{font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.48);margin-top:5px}
-/* SECTIONS */
-section{padding:68px 5vw}
+
+/* ── STATS BAR ── */
+.stats-bar{background:linear-gradient(90deg,#1a0900 0%,#2a1500 100%);border-top:1px solid rgba(201,168,76,.2);border-bottom:1px solid rgba(201,168,76,.2);display:grid;grid-template-columns:repeat(2,1fr)}
+@media(min-width:640px){.stats-bar{grid-template-columns:repeat(4,1fr)}}
+.stat{padding:22px 16px;text-align:center;border-right:1px solid rgba(201,168,76,.12)}
+.stat:last-child{border:none}
+.stat-n{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:#C9A84C;line-height:1;letter-spacing:-.01em}
+.stat-l{font-size:.62rem;color:rgba(255,255,255,.42);text-transform:uppercase;letter-spacing:.1em;margin-top:5px;font-weight:500}
+
+/* ── SECTIONS ── */
+section{padding:72px 5vw}
 .container{max-width:1000px;margin:0 auto}
-.sec-label{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:#C9A84C;margin-bottom:10px;font-weight:500}
-.sec-h2{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,3.5vw,2.5rem);color:#2C3E50;margin-bottom:14px;font-weight:700;letter-spacing:-.01em}
-/* ABOUT */
-.about-grid{display:grid;grid-template-columns:1fr;gap:44px;align-items:center}
+.sec-label{font-size:.65rem;letter-spacing:.22em;text-transform:uppercase;color:#C9A84C;margin-bottom:10px;font-weight:500}
+.sec-h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:700;margin-bottom:14px;letter-spacing:-.01em;color:#f5f0e8}
+.sec-head{text-align:center;margin-bottom:48px}
+.sec-head .sec-h2{color:#f5f0e8}
+.sec-head p{color:rgba(255,255,255,.45);font-size:.92rem;max-width:480px;margin:0 auto;font-weight:300}
+
+/* ── ABOUT ── */
+.about-grid{display:grid;grid-template-columns:1fr;gap:48px;align-items:center}
 @media(min-width:768px){.about-grid{grid-template-columns:1fr 1fr}}
 .about-img-wrap{position:relative}
-.about-img{width:100%;aspect-ratio:4/5;object-fit:cover;box-shadow:0 20px 56px rgba(0,0,0,.18)}
-.about-img-caption{position:absolute;bottom:-12px;right:-12px;background:#C9A84C;color:#fff;padding:12px 18px;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
-.about-text p{color:#5a4030;line-height:1.88;margin-bottom:14px;font-size:.93rem;font-weight:300}
-.hl-list{list-style:none;margin-top:20px;border-top:1px solid #ede0c4}
-.hl-list li{padding:10px 0 10px 22px;position:relative;color:#5a4030;font-size:.87rem;border-bottom:1px solid #ede0c4;font-weight:300}
-.hl-list li:before{content:'◆';color:#C9A84C;position:absolute;left:0;font-size:.6rem;top:14px}
-/* PRODUCTS */
-.products-bg{background:#fff}
-.prod-grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:40px}
-@media(min-width:480px){.prod-grid{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:900px){.prod-grid{grid-template-columns:repeat(3,1fr)}}
-.prod-card{border:1px solid #ede0c4;background:#fdfcf7;padding:28px 24px;transition:transform .22s,box-shadow .22s;position:relative;overflow:hidden}
-.prod-card:hover{transform:translateY(-5px);box-shadow:0 12px 32px rgba(0,0,0,.1)}
-.prod-card:before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#2C3E50,#C9A84C)}
-.prod-icon{font-size:1.6rem;margin-bottom:14px;display:block}
-.prod-card h3{font-family:'Cormorant Garamond',serif;color:#2C3E50;font-size:1.15rem;font-weight:700;margin-bottom:10px}
-.prod-card p{color:#7a6040;font-size:.86rem;line-height:1.65;font-weight:300}
-/* PARALLAX */
+.about-img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;filter:brightness(.9)}
+.about-badge-overlay{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(to top,rgba(10,4,0,.95),transparent);padding:28px 24px 22px}
+.about-badge-text{font-size:.75rem;color:#C9A84C;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.about-text p{color:rgba(255,255,255,.65);line-height:1.88;margin-bottom:14px;font-size:.93rem;font-weight:300}
+.hl-list{list-style:none;margin-top:24px;display:flex;flex-direction:column;gap:0}
+.hl-list li{padding:12px 0 12px 26px;position:relative;color:rgba(255,255,255,.75);font-size:.88rem;border-bottom:1px solid rgba(201,168,76,.1);font-weight:400}
+.hl-list li:first-child{border-top:1px solid rgba(201,168,76,.1)}
+.hl-list li:before{content:'◆';color:#C9A84C;position:absolute;left:0;font-size:.5rem;top:16px}
+
+/* ── GUARANTEE STRIP ── */
+.guarantee-section{background:linear-gradient(135deg,#1a0900 0%,#2a1200 100%);border-top:1px solid rgba(201,168,76,.15);border-bottom:1px solid rgba(201,168,76,.15)}
+.guarantee-grid{display:grid;grid-template-columns:1fr;gap:0}
+@media(min-width:640px){.guarantee-grid{grid-template-columns:repeat(3,1fr)}}
+.guar-card{padding:40px 28px;text-align:center;border-bottom:1px solid rgba(201,168,76,.1);position:relative}
+@media(min-width:640px){.guar-card{border-bottom:none;border-right:1px solid rgba(201,168,76,.1)}}
+.guar-card:last-child{border:none}
+.guar-icon{font-size:2.2rem;margin-bottom:16px;display:block}
+.guar-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#C9A84C;margin-bottom:8px}
+.guar-card p{color:rgba(255,255,255,.55);font-size:.85rem;line-height:1.65;font-weight:300}
+
+/* ── SERVICES ── */
+.services-bg{background:#0a0600}
+.svc-grid{display:grid;grid-template-columns:1fr;gap:1px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.1)}
+@media(min-width:480px){.svc-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.svc-grid{grid-template-columns:repeat(3,1fr)}}
+.svc-card{background:#0f0700;padding:32px 26px;transition:background .22s;position:relative;overflow:hidden}
+.svc-card:hover{background:#1a0e04}
+.svc-card:before{content:'';position:absolute;top:0;left:0;width:3px;height:0;background:#C9A84C;transition:height .3s}
+.svc-card:hover:before{height:100%}
+.svc-icon{font-size:1.8rem;margin-bottom:16px;display:block}
+.svc-card h3{font-family:'Playfair Display',serif;color:#f5f0e8;font-size:1rem;font-weight:700;margin-bottom:8px}
+.svc-card p{color:rgba(255,255,255,.48);font-size:.84rem;line-height:1.65;font-weight:300}
+
+/* ── HOW IT WORKS ── */
+.how-bg{background:linear-gradient(160deg,#120800 0%,#1e1000 100%)}
+.steps-grid{display:grid;grid-template-columns:1fr;gap:0;position:relative;margin-top:48px}
+@media(min-width:640px){.steps-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.steps-grid{grid-template-columns:repeat(4,1fr)}}
+.step{padding:32px 24px;text-align:center;position:relative}
+.step:not(:last-child):after{content:'';position:absolute;right:-1px;top:40px;height:calc(100% - 80px);width:1px;background:rgba(201,168,76,.12)}
+@media(max-width:959px){.step:not(:last-child):after{display:none}}
+.step-num{width:52px;height:52px;border:2px solid #C9A84C;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#C9A84C}
+.step h3{font-size:.92rem;font-weight:600;color:#f5f0e8;margin-bottom:8px;letter-spacing:.02em}
+.step p{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.65;font-weight:300}
+.step-pct{font-size:1.5rem;font-weight:800;color:#C9A84C;font-family:'Playfair Display',serif;display:block;margin-bottom:6px}
+
+/* ── PARALLAX ── */
 .ps-wrap{position:relative;min-height:360px;display:flex;align-items:center;overflow:hidden}
-#ps{position:absolute;inset:-20%;width:140%;height:140%;background-image:url('https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AaVGc3k7VlVvMoSQK2YvlWc2UdIUCy9A9mPO0n7K1_Ndb2-VRv6dHljNcKLqeHeznLBEDIfH1KiYAXz6oB9bqghlyfcuK2YphaXKE4yiFyoJbueylGnjM2ubhpwvmTzmoRZwtC-7o9H3XMvAxc2LqpZUuy1MCgJ3Nlk_spk36mMIN4Bpb_nQiFmYdSlVsSVh1o4pEQpojbTDlCzxjQE3IytFl9PsU9zP9Qzvj0JWR7s6Eoa4cOGOT-i9dwIUiVty1yXdn00ySBmrxWHgKtcc_JnTzE8_dJJzxJQDh5psqrHdCZAPC6CgNyVBcJPzTi-ACRqXXHDI8Wfl0V9FsH30jd9-RB0a_i7tx-8myQcNKZPbGv0cos-uNIU4kIQuE7T3KcOX3fsQS2pLZBwgN12cxs2bKA7IzxiGRo6NyZBfFh7rpiQPB55HBed-T1uOcuzHkQ&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs');background-size:cover;background-position:center;will-change:transform;filter:brightness(.4)}
-.ps-overlay{position:absolute;inset:0}
-.ps-content{position:relative;z-index:2;padding:60px 5vw;color:#fff;max-width:560px}
-.ps-content .sec-label{color:rgba(255,255,255,.5)}
+#ps{position:absolute;inset:-20%;width:140%;height:140%;background-image:url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1400&q=85&fit=crop&auto=format');background-size:cover;background-position:center;will-change:transform;filter:brightness(.35)}
+.ps-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,4,0,.96) 0%,rgba(10,4,0,.7) 50%,transparent 100%)}
+.ps-content{position:relative;z-index:2;padding:60px 5vw;color:#fff;max-width:580px}
 .ps-content .sec-h2{color:#fff}
-.ps-content p{color:rgba(255,255,255,.65);margin-bottom:28px;font-size:.94rem;line-height:1.75;font-weight:300}
-/* GALLERY */
-.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.ps-content p{color:rgba(255,255,255,.6);margin-bottom:28px;font-size:.94rem;line-height:1.75;font-weight:300}
+
+/* ── BRANDS ── */
+.brands-bg{background:#080400;border-top:1px solid rgba(201,168,76,.1);border-bottom:1px solid rgba(201,168,76,.1)}
+.brands-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(201,168,76,.08);border:1px solid rgba(201,168,76,.08);margin-top:40px}
+@media(min-width:500px){.brands-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:768px){.brands-grid{grid-template-columns:repeat(4,1fr)}}
+.brand-cell{background:#0c0600;padding:22px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;transition:background .2s}
+.brand-cell:hover{background:#1a0d04}
+.brand-name{font-family:'Playfair Display',serif;font-size:.88rem;font-weight:700;color:rgba(255,255,255,.75);text-align:center;letter-spacing:.04em}
+.brand-cat{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:rgba(201,168,76,.6);text-align:center;font-weight:500}
+
+/* ── GALLERY ── */
+.gallery-bg{background:#080400}
+.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:36px}
 @media(min-width:600px){.gallery-grid{grid-template-columns:repeat(3,1fr)}}
-.gallery-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;transition:opacity .3s}
-.gallery-grid img:hover{opacity:.85}
-/* REVIEWS */
-.rv-grid{display:grid;grid-template-columns:1fr;gap:18px;margin-top:40px}
+.gallery-grid img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:opacity .3s,transform .4s}
+.gallery-grid img:hover{opacity:.8;transform:scale(1.03)}
+.gallery-grid .wide{grid-column:span 2}
+@media(min-width:600px){.gallery-grid .wide{grid-column:span 1}}
+
+/* ── REVIEWS ── */
+.reviews-bg{background:#0a0600}
+.rv-grid{display:grid;grid-template-columns:1fr;gap:16px;margin-top:40px}
 @media(min-width:640px){.rv-grid{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:960px){.rv-grid{grid-template-columns:repeat(3,1fr)}}
-.rv-card{border:1px solid #ede0c4;padding:26px;background:#fdfcf7}
-.rv-stars{color:#C9A84C;margin-bottom:10px;font-size:1rem}
-.rv-text{color:#5a4030;font-size:.9rem;line-height:1.78;font-style:italic;margin-bottom:14px;font-weight:300}
-.rv-author{color:#2C3E50;font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
-/* CONTACT */
+.rv-card{background:rgba(255,255,255,.03);border:1px solid rgba(201,168,76,.1);padding:28px;transition:border-color .2s}
+.rv-card:hover{border-color:rgba(201,168,76,.3)}
+.rv-stars{color:#C9A84C;margin-bottom:10px;font-size:.9rem;letter-spacing:2px}
+.rv-text{color:rgba(255,255,255,.65);font-size:.88rem;line-height:1.8;font-style:italic;margin-bottom:14px;font-weight:300}
+.rv-author{color:rgba(201,168,76,.7);font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+
+/* ── CONTACT ── */
+.contact-bg{background:linear-gradient(160deg,#0f0700 0%,#1a0900 100%)}
 .contact-grid{display:grid;grid-template-columns:1fr;gap:24px}
 @media(min-width:768px){.contact-grid{grid-template-columns:1fr 1fr}}
-.ci-row{display:flex;align-items:flex-start;gap:14px;padding:18px;border:1px solid #ede0c4;background:#fdfcf7}
-.ci-icon{width:38px;height:38px;background:#2C3E5010;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem;border:1px solid #ede0c4}
-.ci-row h4{font-size:.7rem;color:#9a8060;font-weight:500;margin-bottom:4px;text-transform:uppercase;letter-spacing:.1em}
-.ci-row a,.ci-row p{color:#2C3E50;text-decoration:none;font-size:.9rem;font-weight:600}
-.contact-cta{background:#2C3E50;padding:36px;color:#fff;display:flex;flex-direction:column;gap:14px}
-.contact-cta h3{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-weight:700}
-.contact-cta p{opacity:.75;font-size:.9rem;line-height:1.65;font-weight:300}
-.cta-btn-w{background:#C9A84C;color:#fff;padding:14px 28px;text-decoration:none;font-weight:600;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;display:inline-block;transition:opacity .2s}
-.cta-btn-w:hover{opacity:.88}
-.cta-btn-outline{border:1px solid rgba(255,255,255,.4);color:rgba(255,255,255,.85);padding:12px 26px;text-decoration:none;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;display:inline-block;margin-top:8px}
-footer{background:#0a0600;color:#7a6040;text-align:center;padding:24px;font-size:.78rem;letter-spacing:.04em}
-
-/* GATE FORM */
-#gate-overlay{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;background:linear-gradient(135deg,rgba(8,5,0,.97) 0%,rgba(44,62,80,.97) 100%);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:20px}
-html.show-gate #gate-overlay{display:flex}html.show-gate body{overflow:hidden}
-.gate-card{background:#fdfcf7;width:100%;max-width:440px;padding:44px 40px 38px;box-shadow:0 32px 80px rgba(0,0,0,.45);position:relative;border-top:4px solid #C9A84C;animation:gateIn .55s cubic-bezier(.22,1,.36,1) both}
-@keyframes gateIn{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:none}}
-@media(max-width:480px){.gate-card{padding:32px 24px 28px}}
-.gate-logo{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:700;color:#2C3E50;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}
-.gate-logo span{color:#C9A84C}
-.gate-divider{width:36px;height:2px;background:#C9A84C;margin:12px 0 22px}
-.gate-title{font-family:'Cormorant Garamond',serif;font-size:1.75rem;font-weight:700;color:#2C3E50;line-height:1.25;margin-bottom:8px}
-.gate-sub{font-size:.82rem;color:#8a7060;line-height:1.65;margin-bottom:26px;font-weight:300}
-.gate-field{margin-bottom:16px}
-.gate-label{display:block;font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#5a4030;margin-bottom:7px}
-.gate-input{width:100%;border:1px solid #ede0c4;background:#fff;padding:12px 14px;font-size:.93rem;font-family:'Inter',sans-serif;color:#1a1209;outline:none;border-radius:0;transition:border-color .2s;-webkit-appearance:none}
-.gate-input:focus{border-color:#C9A84C}
-.gate-input::placeholder{color:#c0b09a}
-.gate-error{font-size:.72rem;color:#c0392b;margin-top:5px;display:none}
-.gate-error.show{display:block}
-.gate-btn{width:100%;background:#2C3E50;color:#fff;border:none;padding:14px;font-family:'Inter',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;margin-top:8px;transition:background .25s}
-.gate-btn:hover{background:#C9A84C}
-.gate-note{text-align:center;margin-top:14px;font-size:.72rem;color:#a09080;font-weight:300}
+.ci-row{display:flex;align-items:flex-start;gap:14px;padding:18px 20px;border:1px solid rgba(201,168,76,.1);background:rgba(255,255,255,.02)}
+.ci-icon{width:40px;height:40px;background:rgba(201,168,76,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1rem;border:1px solid rgba(201,168,76,.2)}
+.ci-row h4{font-size:.62rem;color:rgba(201,168,76,.6);font-weight:500;margin-bottom:4px;text-transform:uppercase;letter-spacing:.1em}
+.ci-row a,.ci-row p{color:#f5f0e8;text-decoration:none;font-size:.9rem;font-weight:500}
+.ci-stack{display:flex;flex-direction:column;gap:14px}
+.contact-cta{background:linear-gradient(135deg,#C9A84C 0%,#a8863c 100%);padding:40px;display:flex;flex-direction:column;justify-content:center;gap:16px}
+.contact-cta h3{font-family:'Playfair Display',serif;font-size:1.7rem;font-weight:700;color:#0f0700}
+.contact-cta p{color:rgba(15,7,0,.7);font-size:.9rem;line-height:1.65;font-weight:400}
+.cta-btn-dark{background:#0f0700;color:#C9A84C;padding:15px 30px;text-decoration:none;font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;display:inline-block;border-radius:2px;transition:opacity .2s}
+.cta-btn-dark:hover{opacity:.85}
+.cta-btn-outline{border:2px solid rgba(15,7,0,.4);color:#0f0700;padding:13px 26px;text-decoration:none;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;display:inline-block;margin-top:6px;border-radius:2px;font-weight:600}
+/* ── FOOTER ── */
+footer{background:#050200;border-top:1px solid rgba(201,168,76,.1);color:rgba(255,255,255,.28);padding:28px 5vw;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;font-size:.76rem;letter-spacing:.04em}
+footer a{color:#C9A84C;text-decoration:none}
 </style>
-<script>if(!localStorage.getItem('gsInteriorVisited'))document.documentElement.classList.add('show-gate');</script>
+<script>if(!localStorage.getItem('gsSpaceVisited'))document.documentElement.classList.add('show-gate');</script>
 </head>
 <body>
 
-<div id="gate-overlay">
-  <div class="gate-card">
-    <div class="gate-logo">G&#8209;Space <span>Interiors</span></div>
-    <div class="gate-divider"></div>
-    <h2 class="gate-title">Welcome.<br>Tell us who you are.</h2>
-    <p class="gate-sub">Enter your details to explore our portfolio of luxury interiors, custom furniture &amp; home transformations.</p>
-    <div class="gate-field">
-      <label class="gate-label" for="gate-name">Your Name</label>
-      <input class="gate-input" type="text" id="gate-name" placeholder="Full name" autocomplete="name">
-      <span class="gate-error" id="gate-name-err">Please enter your name.</span>
+<!-- ══════════ GATE / FIRST VISIT FORM ══════════ -->
+<div id="gate">
+  <div class="gate-wrap">
+    <div class="gate-logo-row">
+      <div class="gate-logo-text">G-Space Interiors</div>
+      <div class="gate-logo-sub">Madambakkam, Chennai</div>
     </div>
-    <div class="gate-field">
-      <label class="gate-label" for="gate-phone">Phone Number</label>
-      <input class="gate-input" type="tel" id="gate-phone" placeholder="10-digit mobile number" maxlength="10" autocomplete="tel">
-      <span class="gate-error" id="gate-phone-err">Please enter a valid 10-digit phone number.</span>
+    <div style="text-align:center;margin-bottom:24px">
+      <span class="gate-badge">✦ Dream More. Pay Less. ✦</span>
     </div>
-    <button class="gate-btn" id="gate-submit-btn">Explore Our Work &rarr;</button>
-    <p class="gate-note">&#128274; Your details are private and never shared.</p>
+    <h2 class="gate-title">First Step Towards Your<br><span>Dream Home.</span></h2>
+    <p class="gate-sub">Share your details to explore our luxury interior portfolio and get a free personalised estimate.</p>
+
+    <div class="g-field">
+      <label class="g-label" for="g-name">Your Name *</label>
+      <input class="g-input" type="text" id="g-name" placeholder="Full name" autocomplete="name">
+      <span class="g-err" id="g-name-err">Please enter your name.</span>
+    </div>
+    <div class="g-field">
+      <label class="g-label" for="g-phone">Mobile Number *</label>
+      <div class="g-row">
+        <div class="g-prefix">🇮🇳 +91</div>
+        <input class="g-input" type="tel" id="g-phone" placeholder="10-digit number" maxlength="10" inputmode="numeric">
+      </div>
+      <span class="g-err" id="g-phone-err">Please enter a valid 10-digit number.</span>
+    </div>
+    <div class="g-field">
+      <label class="g-label" for="g-area">Your Area / City</label>
+      <input class="g-input" type="text" id="g-area" placeholder="e.g. Madambakkam, Chennai" autocomplete="off">
+    </div>
+
+    <button class="g-submit" id="g-btn">Explore Our Work &rarr;</button>
+    <p class="g-note">🔒 Your details are safe and never shared.</p>
+
+    <hr class="g-divider">
+    <div class="g-trust-row">
+      <div class="g-trust-item"><div class="g-trust-n">45 Days</div><div class="g-trust-l">Move-In Guarantee</div></div>
+      <div class="g-trust-item"><div class="g-trust-n">Lifetime</div><div class="g-trust-l">Warranty</div></div>
+      <div class="g-trust-item"><div class="g-trust-n">Zero</div><div class="g-trust-l">Hidden Costs</div></div>
+    </div>
   </div>
 </div>
 
-<nav>
+<!-- ══════════ NAV ══════════ -->
+<nav id="nav">
   <span class="nav-brand">G-Space Interiors</span>
-  <a href="https://wa.me/917397395378?text=Hi%20G-Space%20Interiors!%20I%20found%20your%20profile%20and%20I'm%20interested%20in%20interior%20design%20services%20for%20my%20home.%20Could%20you%20please%20share%20more%20details%20about%20your%20offerings%20and%20pricing%3F" class="nav-cta">Enquire</a>
+  <div class="nav-right">
+    <a href="#services" class="nav-link" style="display:none" id="nl">Services</a>
+    <a href="https://wa.me/917397395378?text=Hi!%20I%20saw%20G-Space%20Interiors%20online%20and%20would%20like%20a%20free%20estimate%20for%20my%20home%20interiors.%20Please%20share%20details!" class="nav-cta">Get Estimate</a>
+  </div>
 </nav>
 
+<!-- ══════════ HERO ══════════ -->
 <div class="hero">
   <div class="hero-bg" id="hp"></div>
   <div class="hero-overlay"></div>
-  <div class="hero-content">
-    <p class="hero-eyebrow">⭐ 5/5 · Trusted Since Day One</p>
-    <h1>Transform Your Space, Elevate Your Life</h1>
-    <p>Chennai's trusted interior design experts delivering custom, end-to-end home transformation solutions in Madambakkam and beyond.</p>
+  <div class="hero-inner">
+    <p class="hero-chip">⭐ 5/5 Rated · Google Verified · Est. 2026</p>
+    <div class="offer-badge">
+      <div><div style="font-size:.6rem;letter-spacing:.1em;opacity:.8">UP TO</div><div class="pct">50%</div><div style="font-size:.6rem;letter-spacing:.1em;opacity:.8">OFF</div></div>
+      <div style="border-left:1px solid rgba(255,255,255,.25);padding-left:10px;line-height:1.5">First Time Ever<br>No Surprise Interiors</div>
+    </div>
+    <h1>Dream More.<br><em>Pay Less.</em></h1>
+    <p class="hero-tagline">Chennai's luxury interior specialists delivering complete home transformations — on time, on budget, with zero surprises. Madambakkam & beyond.</p>
+    <div class="hero-pills">
+      <span class="hero-pill">45 Days Move-In</span>
+      <span class="hero-pill">Lifetime Warranty</span>
+      <span class="hero-pill">No Hidden Cost</span>
+      <span class="hero-pill">Modular Kitchens</span>
+    </div>
     <div class="hero-btns">
-      <a href="https://wa.me/917397395378?text=Hi%20G-Space%20Interiors!%20I%20found%20your%20profile%20and%20I'm%20interested%20in%20interior%20design%20services%20for%20my%20home.%20Could%20you%20please%20share%20more%20details%20about%20your%20offerings%20and%20pricing%3F" class="btn-gold">Book a Free Consultation Today</a>
-      <a href="tel:07397 395 378" class="btn-ghost">📞 Call Us</a>
+      <a href="https://wa.me/917397395378?text=Hi!%20I%20saw%20G-Space%20Interiors%20online%20and%20would%20like%20a%20free%20estimate%20for%20my%20home%20interiors.%20Please%20share%20details!" class="btn-gold">Get Free Estimate Today</a>
+      <a href="tel:07397395378" class="btn-ghost">📞 07397 395 378</a>
     </div>
   </div>
 </div>
 
-<div class="trust-bar" data-r>
-  <div class="trust-item"><div class="trust-num">5/5</div><div class="trust-lbl">Rating</div></div>
-  <div class="trust-item"><div class="trust-num">✓</div><div class="trust-lbl">Certified</div></div>
-  <div class="trust-item"><div class="trust-num">100%</div><div class="trust-lbl">Genuine</div></div>
-  <div class="trust-item"><div class="trust-num">Local</div><div class="trust-lbl">Trusted</div></div>
+<!-- ══════════ STATS ══════════ -->
+<div class="stats-bar" data-r>
+  <div class="stat"><div class="stat-n">12+</div><div class="stat-l">Years Experience</div></div>
+  <div class="stat"><div class="stat-n">1900+</div><div class="stat-l">Projects Delivered</div></div>
+  <div class="stat"><div class="stat-n">5/5</div><div class="stat-l">Google Rating</div></div>
+  <div class="stat"><div class="stat-n">∞</div><div class="stat-l">Lifetime Warranty</div></div>
 </div>
 
+<!-- ══════════ ABOUT ══════════ -->
 <section>
   <div class="container">
     <div class="about-grid">
       <div class="about-img-wrap" data-r>
-        <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AaVGc3mnyW3Iyk23-CwFDCZwEHeADoKKhZMIt3N3mM1dAiBsG7zZAz23SG90nfWU_PB2TOWV-VkV8iMR094ovqKbXMHCg7s8_3RmcYUrodeHMhan1YW_CJ8CnNFtrOrn5VoG4c8bLijKvLa3CzZQiIpypccnMc67NdinxW8ETUF8cf5wPWgcEdBtUzxQeHeojyRtd2HLyPnyIUJB9fhEeBnRrzeK9OT5X59limQw850HR3MqMzkpKdkUruNxoTR0ja1kEd_qXongRBane4QYsN0sTd66sbxOP9TrnUq7OpIUXepaMfiuR5dzQ8r5p28UVYvWcT1Rsf7orMrJp2QEL2zTJ6SHR96ZQ2VV7h18h60WIfeW1TzVgJu1Rf0lNgDYr73quzNnnU20Ko2zqgr41r_rokpfUkPhYpEQcGkYRyCZVG13l-aN&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="G-Space Interiors" class="about-img" loading="lazy" onerror="this.src='https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AaVGc3mnyW3Iyk23-CwFDCZwEHeADoKKhZMIt3N3mM1dAiBsG7zZAz23SG90nfWU_PB2TOWV-VkV8iMR094ovqKbXMHCg7s8_3RmcYUrodeHMhan1YW_CJ8CnNFtrOrn5VoG4c8bLijKvLa3CzZQiIpypccnMc67NdinxW8ETUF8cf5wPWgcEdBtUzxQeHeojyRtd2HLyPnyIUJB9fhEeBnRrzeK9OT5X59limQw850HR3MqMzkpKdkUruNxoTR0ja1kEd_qXongRBane4QYsN0sTd66sbxOP9TrnUq7OpIUXepaMfiuR5dzQ8r5p28UVYvWcT1Rsf7orMrJp2QEL2zTJ6SHR96ZQ2VV7h18h60WIfeW1TzVgJu1Rf0lNgDYr73quzNnnU20Ko2zqgr41r_rokpfUkPhYpEQcGkYRyCZVG13l-aN&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs'">
-        <div class="about-img-caption">Est. 2026</div>
+        <img src="https://images.unsplash.com/photo-1616137466211-f939a420be84?w=800&q=85&fit=crop&auto=format" alt="G-Space Interiors" class="about-img" loading="lazy">
+        <div class="about-badge-overlay">
+          <div class="about-badge-text">◆ G-Space Interiors · Madambakkam, Chennai</div>
+        </div>
       </div>
       <div data-r data-d="2">
-        <p class="sec-label">Our Story</p>
-        <h2 class="sec-h2">G-Space Interiors</h2>
-        <p class="about-text" style="color:#5a4030;line-height:1.88;margin-bottom:14px;font-size:.93rem;font-weight:300">G-Space Interiors, led by the dedicated Mr. Gopalakrishnan, is a premier interior design and contracting firm based in Madambakkam, Chennai. With a perfect 5-star reputation built on 76 glowing reviews, we specialize in turning ordinary living spaces into beautifully crafted, functional environments tailored to each client's vision. From custom wardrobes and TV units to prayer units and crockery shelves, we bring precision, creativity, and professionalism to every project.</p><p class="about-text" style="color:#5a4030;line-height:1.88;margin-bottom:14px;font-size:.93rem;font-weight:300">What sets G-Space Interiors apart is our commitment to being your single point of contact for all interior needs — whether it's woodwork, PVC installations, electrical work, or plumbing. Our dedicated teams for each vertical ensure that every aspect of your home renovation is handled with expertise and care. We work with minimal disruption to your daily life, completing projects cleanly and efficiently while keeping you informed every step of the way.</p>
-        <ul class="hl-list"><li>Perfect 5-Star Rating across 76 verified customer reviews</li><li>Single point of contact for all interior, electrical, and plumbing needs</li><li>Dedicated specialist teams for each vertical ensuring expert workmanship</li></ul>
+        <p class="sec-label">About Us</p>
+        <h2 class="sec-h2">G-Space Interiors — Where Your Dream Home Becomes Reality</h2>
+        <p class="about-text">G-Space Interiors is Madambakkam's premier luxury interior design and contracting firm. Led by Mr. Gopalakrishnan, we are a one-stop destination for complete home transformation — from concept to move-in. With a perfect 5-star reputation and a passion for craftsmanship, we deliver spaces that inspire.</p>
+        <p class="about-text">Our signature promise: every project is completed within <strong style="color:#C9A84C">45 days</strong>, backed by a <strong style="color:#C9A84C">lifetime warranty</strong> and <strong style="color:#C9A84C">zero hidden costs</strong>. From modular kitchens to full home interiors, we handle every detail — woodwork, electrical, plumbing — through dedicated specialist teams.</p>
+        <ul class="hl-list">
+          <li>Perfect 5-Star Rating across 76+ verified Google reviews</li>
+          <li>45-Day Move-In Guarantee on all complete home projects</li>
+          <li>Lifetime warranty on all furniture and interior work</li>
+          <li>Transparent pricing — what we quote is what you pay</li>
+          <li>One point of contact: wood, electrical, plumbing — all covered</li>
+        </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="products-bg">
+<!-- ══════════ 3 GUARANTEES ══════════ -->
+<div class="guarantee-section" data-r>
   <div class="container">
-    <div data-r><p class="sec-label">Collections</p><h2 class="sec-h2">What We Offer</h2></div>
-    <div class="prod-grid">
-      <div class="prod-card" data-r data-d="1"><span class="prod-icon">💎</span><h3>Custom Wardrobe Design &amp; Installation</h3><p>Bespoke wardrobe solutions crafted to fit your space perfectly, including modern upgrades over existing structures like Kadappa shelves for a fresh, contemporary look.</p></div><div class="prod-card" data-r data-d="2"><span class="prod-icon">✨</span><h3>TV Unit &amp; Entertainment Furniture</h3><p>Stylish, custom-designed TV units built to your exact specifications, seamlessly blending aesthetics with functionality for your living room.</p></div><div class="prod-card" data-r data-d="3"><span class="prod-icon">🏆</span><h3>Modular Kitchen Installation</h3><p>Complete modular kitchen setups and upgrades, including cabinet fittings and countertop installations tailored to your cooking and storage needs.</p></div><div class="prod-card" data-r data-d="1"><span class="prod-icon">⭐</span><h3>Prayer Unit &amp; Crockery Unit</h3><p>Thoughtfully designed prayer units and crockery cabinets that combine traditional sensibilities with modern craftsmanship to complement your home interiors.</p></div><div class="prod-card" data-r data-d="2"><span class="prod-icon">🎁</span><h3>PVC &amp; Woodwork Solutions</h3><p>High-quality PVC and wood-based interior works including shelving, paneling, and furniture installations for durable and elegant home spaces.</p></div><div class="prod-card" data-r data-d="3"><span class="prod-icon">🛍️</span><h3>End-to-End Home Interior Services</h3><p>Comprehensive interior contracting covering woodwork, electrical, plumbing, and design — all managed under one roof with a single point of contact for hassle-free execution.</p></div>
+    <div class="sec-head" style="padding-top:52px">
+      <p class="sec-label">Our Promise</p>
+      <h2 class="sec-h2">Why Thousands Trust G-Space</h2>
+    </div>
+    <div class="guarantee-grid">
+      <div class="guar-card" data-r data-d="1">
+        <span class="guar-icon">📅</span>
+        <h3>45 Days Move-In Guarantee</h3>
+        <p>We commit to completing your full home interior within 45 days from project start — guaranteed in writing, no delays, no excuses.</p>
+      </div>
+      <div class="guar-card" data-r data-d="2">
+        <span class="guar-icon">🏆</span>
+        <h3>Lifetime Warranty</h3>
+        <p>Every piece of furniture, every installation, every fit and finish comes with our lifetime warranty. We stand behind our work — forever.</p>
+      </div>
+      <div class="guar-card" data-r data-d="3">
+        <span class="guar-icon">💰</span>
+        <h3>No Hidden Cost</h3>
+        <p>The price you see is the price you pay. No surprise additions, no last-minute extras. Complete transparency from day one to move-in.</p>
+      </div>
+    </div>
+    <div style="padding-bottom:52px"></div>
+  </div>
+</div>
+
+<!-- ══════════ SERVICES ══════════ -->
+<section class="services-bg" id="services">
+  <div class="container">
+    <div class="sec-head" data-r>
+      <p class="sec-label">What We Create</p>
+      <h2 class="sec-h2">Our Interior Services</h2>
+      <p>Complete home transformation — every room, every detail, one expert team</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card" data-r data-d="1"><span class="svc-icon">🍳</span><h3>Modular Kitchen</h3><p>Custom-designed modular kitchens with premium finishes, smart storage solutions and top-quality hardware for the perfect cooking space.</p></div>
+      <div class="svc-card" data-r data-d="2"><span class="svc-icon">🚪</span><h3>Wardrobe & Storage</h3><p>Bespoke wardrobe solutions in sliding, hinged or walk-in styles — built to your exact space, style and budget.</p></div>
+      <div class="svc-card" data-r data-d="3"><span class="svc-icon">🛋️</span><h3>Living Room Design</h3><p>TV units, feature walls, sofa sets, crockery units and complete living area makeovers that make a lasting impression.</p></div>
+      <div class="svc-card" data-r data-d="1"><span class="svc-icon">🛏️</span><h3>Bedroom Interiors</h3><p>Luxurious bedroom transformations including fitted wardrobes, headboards, study units and false ceilings with lighting.</p></div>
+      <div class="svc-card" data-r data-d="2"><span class="svc-icon">🏠</span><h3>Full Home Interiors</h3><p>End-to-end complete home interior packages — from bare shell to move-in ready, managed by a single point of contact.</p></div>
+      <div class="svc-card" data-r data-d="3"><span class="svc-icon">⚡</span><h3>Electrical & Plumbing</h3><p>Seamlessly integrated electrical, plumbing and false ceiling work carried out by dedicated specialist teams alongside interior works.</p></div>
     </div>
   </div>
 </section>
 
+<!-- ══════════ HOW IT WORKS ══════════ -->
+<section class="how-bg">
+  <div class="container">
+    <div class="sec-head" data-r>
+      <p class="sec-label">Simple Process</p>
+      <h2 class="sec-h2">How It Works</h2>
+      <p>From first meeting to moving in — a clear, transparent 4-step journey</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step" data-r data-d="1">
+        <div class="step-num">1</div>
+        <h3>Site Visit & Meet</h3>
+        <p>We visit your home, understand your vision, take measurements and discuss your complete interior requirements.</p>
+      </div>
+      <div class="step" data-r data-d="2">
+        <div class="step-num">2</div>
+        <span class="step-pct">5%</span>
+        <h3>Initial Booking</h3>
+        <p>Confirm your project with a small 5% booking amount. Design work and material planning begins immediately.</p>
+      </div>
+      <div class="step" data-r data-d="3">
+        <div class="step-num">3</div>
+        <span class="step-pct">60%</span>
+        <h3>Execution Begins</h3>
+        <p>On 60% payment, our teams begin full execution. Site work, fabrication and installations proceed on schedule.</p>
+      </div>
+      <div class="step" data-r data-d="4">
+        <div class="step-num">4</div>
+        <span class="step-pct">100%</span>
+        <h3>Final Installation</h3>
+        <p>Balance cleared on handover. We do final installations, snag-fixes and hand you the keys to your dream home!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ PARALLAX CTA ══════════ -->
 <div class="ps-wrap" data-r>
   <div id="ps"></div>
   <div class="ps-overlay"></div>
   <div class="ps-content">
-    <p class="sec-label">Visit Our Store</p>
-    <h2 class="sec-h2">Experience It In Person</h2>
-    <p>No.72B, Madambakkam Main Rd, opp. to nethra optical, Shanthi Nikethan Colony, Madambakkam, Chennai, Tamil Nadu 600126, India</p>
-    <a href="https://wa.me/917397395378?text=Hi%20G-Space%20Interiors!%20I%20found%20your%20profile%20and%20I'm%20interested%20in%20interior%20design%20services%20for%20my%20home.%20Could%20you%20please%20share%20more%20details%20about%20your%20offerings%20and%20pricing%3F" style="background:#C9A84C;color:#fff;padding:13px 32px;text-decoration:none;font-weight:600;font-size:.82rem;letter-spacing:.1em;text-transform:uppercase;display:inline-block">💬 WhatsApp Us</a>
+    <p class="sec-label">Visit Our Showroom</p>
+    <h2 class="sec-h2">Experience It in Person</h2>
+    <p>No.72B, Madambakkam Main Rd, opp. to Nethra Optical, Shanthi Nikethan Colony, Madambakkam, Chennai — 600126</p>
+    <a href="https://wa.me/917397395378?text=Hi!%20I%20saw%20G-Space%20Interiors%20online%20and%20would%20like%20a%20free%20estimate%20for%20my%20home%20interiors.%20Please%20share%20details!" class="btn-gold">💬 WhatsApp for Free Estimate</a>
   </div>
 </div>
 
-<section><div class="container"><div data-r><p class="sec-label">Gallery</p><h2 class="sec-h2">Our Collection</h2></div><div class="gallery-grid" style="margin-top:28px"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AaVGc3mnyW3Iyk23-CwFDCZwEHeADoKKhZMIt3N3mM1dAiBsG7zZAz23SG90nfWU_PB2TOWV-VkV8iMR094ovqKbXMHCg7s8_3RmcYUrodeHMhan1YW_CJ8CnNFtrOrn5VoG4c8bLijKvLa3CzZQiIpypccnMc67NdinxW8ETUF8cf5wPWgcEdBtUzxQeHeojyRtd2HLyPnyIUJB9fhEeBnRrzeK9OT5X59limQw850HR3MqMzkpKdkUruNxoTR0ja1kEd_qXongRBane4QYsN0sTd66sbxOP9TrnUq7OpIUXepaMfiuR5dzQ8r5p28UVYvWcT1Rsf7orMrJp2QEL2zTJ6SHR96ZQ2VV7h18h60WIfeW1TzVgJu1Rf0lNgDYr73quzNnnU20Ko2zqgr41r_rokpfUkPhYpEQcGkYRyCZVG13l-aN&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="G-Space Interiors" loading="lazy" onerror="this.parentElement.remove()"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AaVGc3k7VlVvMoSQK2YvlWc2UdIUCy9A9mPO0n7K1_Ndb2-VRv6dHljNcKLqeHeznLBEDIfH1KiYAXz6oB9bqghlyfcuK2YphaXKE4yiFyoJbueylGnjM2ubhpwvmTzmoRZwtC-7o9H3XMvAxc2LqpZUuy1MCgJ3Nlk_spk36mMIN4Bpb_nQiFmYdSlVsSVh1o4pEQpojbTDlCzxjQE3IytFl9PsU9zP9Qzvj0JWR7s6Eoa4cOGOT-i9dwIUiVty1yXdn00ySBmrxWHgKtcc_JnTzE8_dJJzxJQDh5psqrHdCZAPC6CgNyVBcJPzTi-ACRqXXHDI8Wfl0V9FsH30jd9-RB0a_i7tx-8myQcNKZPbGv0cos-uNIU4kIQuE7T3KcOX3fsQS2pLZBwgN12cxs2bKA7IzxiGRo6NyZBfFh7rpiQPB55HBed-T1uOcuzHkQ&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="G-Space Interiors" loading="lazy" onerror="this.parentElement.remove()"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AaVGc3nxfkI3uLY9Gsm0DQ6HxKYilcMwy4pXLpHjOsO_cO1vx72am-xQKdJaqP3m0PMrPJ13BFA05zXPiG1duhcItchT-CUJM_hLQlOUfXbvcKoCRDKQ_u4DqNAlmulGtpy0fr2HjhrRqYSqoydu5bPA5FnKY_TVRLirtzPSrgrENiTqJjDcOIw55jalTVkhkerRvOzkkR3_gAmfHrJ8YNEXHToAcI3qVQ9p8HBP4Cy2Kxsq6Uu2C-yQnQ_GZTNdW2vxdkjAjy8eaop2bwUPgPaG6Qf6WMRDLO4VOEV4ssunmRSFIwnWMvshGtVJUB9dNdVzh--9DHLVhZCVQqDAc_L1B18NaOtZMnDLW1S5Gsr6XaQzxJB8g83BdGTQJhOlC4E9NsPvQbo5pG-OK-nxlpfWLKkYzE62zKqxsKo4tHnpQtjr_fot&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="G-Space Interiors" loading="lazy" onerror="this.parentElement.remove()"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AaVGc3nYLVP0fXNPCEsySaDTaNbpPl92vAyeHya6xrdHctpVrtelZGrFBkDpZIEJsmqjTMavWuk_oErY0JcvNBIUPmmqC3MBrSBEjp1PrmxroDYmFV_mAUjE5UToNcDAE0Tkc5_Z3dwoPsCdwKUPGELs4nzIH_pY3F8gyII1bI7W8IpOw9yRF_7DMyTXLCL7NbebEeJFNhWZNdK_vYsL1JLc8lQQkf5PuJxD1cQfeXh9Xt-QSaoU-NCj_unrsTWE7RFJYrj3cw585WkNBCjGcTVWIGxPVAZRTaQKQCaiJbqFfNM8hjwpN_8xNBbMuaJ1gR0r1wKyo1LPMKrWmNN67unUM0XLSpEjcJ-eEDleqyMFd6R27vqlH2jJo-xABm5-0HHHy3cWQKrSdSF1bu5LwVD6qlChWK7OL_kYl76fPrcfWmyMvg&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="G-Space Interiors" loading="lazy" onerror="this.parentElement.remove()"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photo_reference=AaVGc3mv-w3fCCQIASsVbkkcmsnZN-xijPshUAddyuDNX345c_O-OQR3-cARzi4q1v84iBPUo1o0LZhzpWAuHEaM2Hg7OUNBG103WS2PSoPrt_aRFycjw6n69Zg0ldrjjY4sYJnd_XHALiFkCP97EJvB2Zi_xczEtkZ9M0Ld1HJGHNCRmlRJGLrsTH-2uF7hwDwJ6pWCuh3-ZJ3kPTOlSxB6M4rbHx6aGkZ2CPEbGUej_QhhwSNwB45sAtZX243U8DYFMlmZK2902h8tPW1qg1NQrPmArQnQx5eiRjHvPSIUk5rUgekm3PcItNcqap75ZPD2XsNNZJEZdfr0uauLO2AEZguNo8P7EjGU0WqZfXaaQsTqsARs6IuFendvnZb7i2IxfsKd42jDHUNxHC0sEOypajd8b8TDL0oZaxUmI1LI89uSEvAoidQkVdeGBeT_Hzax&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="G-Space Interiors" loading="lazy" onerror="this.parentElement.remove()"></div></div></section>
-
-<section>
+<!-- ══════════ PARTNER BRANDS ══════════ -->
+<section class="brands-bg">
   <div class="container">
-    <div data-r><p class="sec-label">Reviews</p><h2 class="sec-h2">What Customers Say</h2></div>
-    <div class="rv-grid">
-      <div class="rv-card" data-r data-d="NaN"><div class="rv-stars">★★★★★</div><p class="rv-text">"G-Space Interiors beautifully transformed our old wardrobe area with Kadappa shelves into a most advanced modern look. Truly impressive work that exceeded our expectations."</p><div class="rv-author">— Jagadesh Kumar</div></div><div class="rv-card" data-r data-d="NaN"><div class="rv-stars">★★★★★</div><p class="rv-text">"They did an excellent job designing, customizing, and installing our TV unit, Prayer unit, and Crockery unit exactly as we desired. Their dedicated teams for each vertical really show in the quality of work."</p><div class="rv-author">— George Manohar Sebasthian</div></div><div class="rv-card" data-r data-d="NaN"><div class="rv-stars">★★★★★</div><p class="rv-text">"Gopalakrishnan and his team guided us with great ideas and completed all interior work while we were at home with absolutely no disturbance. Highly professional and reliable."</p><div class="rv-author">— Akshaya</div></div><div class="rv-card" data-r data-d="NaN"><div class="rv-stars">★★★★★</div><p class="rv-text">"Very professional team that did a clean and neat job on my flat. Even my small PVC installation requirement and kitchen work were handled perfectly and with great attention to detail."</p><div class="rv-author">— Prashanth S</div></div><div class="rv-card" data-r data-d="NaN"><div class="rv-stars">★★★★★</div><p class="rv-text">"Mr. Gopalakrishnan was the one point contact for all our interior needs in our new home — wood works, electrical, plumbing — he had it all covered. A truly dependable partner for home interiors."</p><div class="rv-author">— Arun Shanmugam</div></div>
+    <div class="sec-head" data-r>
+      <p class="sec-label">Our Trusted Partners</p>
+      <h2 class="sec-h2">Brands We Work With</h2>
+      <p>We use only the finest certified materials from India's most trusted manufacturers</p>
+    </div>
+    <div class="brands-grid">
+      <div class="brand-cell" data-r data-d="1">
+        <div class="brand-name">Century</div>
+        <div class="brand-cat">Plywood &amp; Laminates</div>
+      </div>
+      <div class="brand-cell" data-r data-d="2">
+        <div class="brand-name">GreenLam</div>
+        <div class="brand-cat">Laminates</div>
+      </div>
+      <div class="brand-cell" data-r data-d="3">
+        <div class="brand-name">Advance</div>
+        <div class="brand-cat">Laminates</div>
+      </div>
+      <div class="brand-cell" data-r data-d="4">
+        <div class="brand-name">Merino</div>
+        <div class="brand-cat">Laminates</div>
+      </div>
+      <div class="brand-cell" data-r data-d="1">
+        <div class="brand-name">Ebco</div>
+        <div class="brand-cat">Hardware Accessories</div>
+      </div>
+      <div class="brand-cell" data-r data-d="2">
+        <div class="brand-name">Hettich</div>
+        <div class="brand-cat">Hardware Accessories</div>
+      </div>
+      <div class="brand-cell" data-r data-d="3">
+        <div class="brand-name">Saint-Gobain</div>
+        <div class="brand-cat">Glass &amp; Solutions</div>
+      </div>
+      <div class="brand-cell" data-r data-d="4">
+        <div class="brand-name">Oriong</div>
+        <div class="brand-cat">Premium Mirrors</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section style="background:#f7f2e8">
+<!-- ══════════ GALLERY ══════════ -->
+<section class="gallery-bg">
   <div class="container">
+    <div class="sec-head" data-r>
+      <p class="sec-label">Our Work</p>
+      <h2 class="sec-h2">Spaces We've Transformed</h2>
+    </div>
+    <div class="gallery-grid">
+      <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AaVGc3mnyW3Iyk23-CwFDCZwEHeADoKKhZMIt3N3mM1dAiBsG7zZAz23SG90nfWU_PB2TOWV-VkV8iMR094ovqKbXMHCg7s8_3RmcYUrodeHMhan1YW_CJ8CnNFtrOrn5VoG4c8bLijKvLa3CzZQiIpypccnMc67NdinxW8ETUF8cf5wPWgcEdBtUzxQeHeojyRtd2HLyPnyIUJB9fhEeBnRrzeK9OT5X59limQw850HR3MqMzkpKdkUruNxoTR0ja1kEd_qXongRBane4QYsN0sTd66sbxOP9TrnUq7OpIUXepaMfiuR5dzQ8r5p28UVYvWcT1Rsf7orMrJp2QEL2zTJ6SHR96ZQ2VV7h18h60WIfeW1TzVgJu1Rf0lNgDYr73quzNnnU20Ko2zqgr41r_rokpfUkPhYpEQcGkYRyCZVG13l-aN&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="Interior Design" loading="lazy" onerror="this.parentElement.remove()">
+      <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AaVGc3k7VlVvMoSQK2YvlWc2UdIUCy9A9mPO0n7K1_Ndb2-VRv6dHljNcKLqeHeznLBEDIfH1KiYAXz6oB9bqghlyfcuK2YphaXKE4yiFyoJbueylGnjM2ubhpwvmTzmoRZwtC-7o9H3XMvAxc2LqpZUuy1MCgJ3Nlk_spk36mMIN4Bpb_nQiFmYdSlVsSVh1o4pEQpojbTDlCzxjQE3IytFl9PsU9zP9Qzvj0JWR7s6Eoa4cOGOT-i9dwIUiVty1yXdn00ySBmrxWHgKtcc_JnTzE8_dJJzxJQDh5psqrHdCZAPC6CgNyVBcJPzTi-ACRqXXHDI8Wfl0V9FsH30jd9-RB0a_i7tx-8myQcNKZPbGv0cos-uNIU4kIQuE7T3KcOX3fsQS2pLZBwgN12cxs2bKA7IzxiGRo6NyZBfFh7rpiQPB55HBed-T1uOcuzHkQ&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="Interior Design" loading="lazy" onerror="this.parentElement.remove()">
+      <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AaVGc3nxfkI3uLY9Gsm0DQ6HxKYilcMwy4pXLpHjOsO_cO1vx72am-xQKdJaqP3m0PMrPJ13BFA05zXPiG1duhcItchT-CUJM_hLQlOUfXbvcKoCRDKQ_u4DqNAlmulGtpy0fr2HjhrRqYSqoydu5bPA5FnKY_TVRLirtzPSrgrENiTqJjDcOIw55jalTVkhkerRvOzkkR3_gAmfHrJ8YNEXHToAcI3qVQ9p8HBP4Cy2Kxsq6Uu2C-yQnQ_GZTNdW2vxdkjAjy8eaop2bwUPgPaG6Qf6WMRDLO4VOEV4ssunmRSFIwnWMvshGtVJUB9dNdVzh--9DHLVhZCVQqDAc_L1B18NaOtZMnDLW1S5Gsr6XaQzxJB8g83BdGTQJhOlC4E9NsPvQbo5pG-OK-nxlpfWLKkYzE62zKqxsKo4tHnpQtjr_fot&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="Interior Design" loading="lazy" onerror="this.parentElement.remove()">
+      <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AaVGc3nYLVP0fXNPCEsySaDTaNbpPl92vAyeHya6xrdHctpVrtelZGrFBkDpZIEJsmqjTMavWuk_oErY0JcvNBIUPmmqC3MBrSBEjp1PrmxroDYmFV_mAUjE5UToNcDAE0Tkc5_Z3dwoPsCdwKUPGELs4nzIH_pY3F8gyII1bI7W8IpOw9yRF_7DMyTXLCL7NbebEeJFNhWZNdK_vYsL1JLc8lQQkf5PuJxD1cQfeXh9Xt-QSaoU-NCj_unrsTWE7RFJYrj3cw585WkNBCjGcTVWIGxPVAZRTaQKQCaiJbqFfNM8hjwpN_8xNBbMuaJ1gR0r1wKyo1LPMKrWmNN67unUM0XLSpEjcJ-eEDleqyMFd6R27vqlH2jJo-xABm5-0HHHy3cWQKrSdSF1bu5LwVD6qlChWK7OL_kYl76fPrcfWmyMvg&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="Interior Design" loading="lazy" onerror="this.parentElement.remove()">
+      <img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=800&photo_reference=AaVGc3mv-w3fCCQIASsVbkkcmsnZN-xijPshUAddyuDNX345c_O-OQR3-cARzi4q1v84iBPUo1o0LZhzpWAuHEaM2Hg7OUNBG103WS2PSoPrt_aRFycjw6n69Zg0ldrjjY4sYJnd_XHALiFkCP97EJvB2Zi_xczEtkZ9M0Ld1HJGHNCRmlRJGLrsTH-2uF7hwDwJ6pWCuh3-ZJ3kPTOlSxB6M4rbHx6aGkZ2CPEbGUej_QhhwSNwB45sAtZX243U8DYFMlmZK2902h8tPW1qg1NQrPmArQnQx5eiRjHvPSIUk5rUgekm3PcItNcqap75ZPD2XsNNZJEZdfr0uauLO2AEZguNo8P7EjGU0WqZfXaaQsTqsARs6IuFendvnZb7i2IxfsKd42jDHUNxHC0sEOypajd8b8TDL0oZaxUmI1LI89uSEvAoidQkVdeGBeT_Hzax&key=AIzaSyC_ivUff6pQaag6HCBj5_PO3mk1G6kCKKs" alt="Interior Design" loading="lazy" onerror="this.parentElement.remove()">
+      <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80&fit=crop&auto=format" alt="Modern Kitchen" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ REVIEWS ══════════ -->
+<section class="reviews-bg">
+  <div class="container">
+    <div class="sec-head" data-r>
+      <p class="sec-label">Client Stories</p>
+      <h2 class="sec-h2">What Our Clients Say</h2>
+    </div>
+    <div class="rv-grid">
+      <div class="rv-card" data-r data-d="1"><div class="rv-stars">★★★★★</div><p class="rv-text">"G-Space beautifully transformed our wardrobe area. They modernised our old Kadappa shelves into a stunning, contemporary look. Truly impressive work that exceeded every expectation."</p><div class="rv-author">— Jagadesh Kumar</div></div>
+      <div class="rv-card" data-r data-d="2"><div class="rv-stars">★★★★★</div><p class="rv-text">"Excellent job on our TV unit, Prayer unit and Crockery unit — exactly as we wanted. Their dedicated teams for each area really show in the quality. Highly recommended!"</p><div class="rv-author">— George Manohar Sebasthian</div></div>
+      <div class="rv-card" data-r data-d="3"><div class="rv-stars">★★★★★</div><p class="rv-text">"Gopalakrishnan and team gave us great design ideas and completed everything while we were at home — absolutely no disturbance. Highly professional and reliable."</p><div class="rv-author">— Akshaya</div></div>
+      <div class="rv-card" data-r data-d="1"><div class="rv-stars">★★★★★</div><p class="rv-text">"Clean and neat job on my flat. Even my small PVC installation and kitchen work were handled perfectly. Great attention to detail and flawless finish."</p><div class="rv-author">— Prashanth S</div></div>
+      <div class="rv-card" data-r data-d="2"><div class="rv-stars">★★★★★</div><p class="rv-text">"Mr. Gopalakrishnan was the single point of contact for all our interior needs — woodwork, electrical, plumbing. A truly dependable partner for home interiors."</p><div class="rv-author">— Arun Shanmugam</div></div>
+      <div class="rv-card" data-r data-d="3"><div class="rv-stars">★★★★★</div><p class="rv-text">"The transparency in pricing was a breath of fresh air. What was quoted is exactly what we paid — no surprises. The 45-day commitment was honoured perfectly."</p><div class="rv-author">— Rajan M</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section class="contact-bg">
+  <div class="container">
+    <div class="sec-head" data-r>
+      <p class="sec-label">Let's Connect</p>
+      <h2 class="sec-h2">Start Your Dream Home Journey</h2>
+    </div>
     <div class="contact-grid">
-      <div style="display:flex;flex-direction:column;gap:14px" data-r>
-        <div data-r><p class="sec-label">Find Us</p><h2 class="sec-h2">Visit Our Store</h2></div>
-        <div class="ci-row"><div class="ci-icon">📞</div><div><h4>Phone</h4><a href="tel:07397 395 378">07397 395 378</a></div></div>
-        <div class="ci-row"><div class="ci-icon">📍</div><div><h4>Address</h4><p>No.72B, Madambakkam Main Rd, opp. to nethra optical, Shanthi Nikethan Colony, Madambakkam, Chennai, Tamil Nadu 600126, India</p></div></div>
-        <div class="ci-row"><div class="ci-icon">🕐</div><div><h4>Hours</h4><p>Monday: 9:00 AM – 9:00 PM | Tuesday: 9:00 AM – 9:00 PM | Wednesday: 9:00 AM – 9:00 PM | Thursday: 9:00 AM – 9:00 PM | Friday: 9:00 AM – 9:00 PM | Saturday: 9:00 AM – 9:00 PM | Sunday: 9:00 AM – 2:00 PM</p></div></div>
-        <div class="ci-row"><div class="ci-icon">🗺️</div><div><h4>Map</h4><a href="https://maps.google.com/?cid=14477296041343030980">View on Google Maps</a></div></div>
+      <div class="ci-stack" data-r>
+        <div class="ci-row"><div class="ci-icon">📞</div><div><h4>Phone</h4><a href="tel:07397395378">07397 395 378</a></div></div>
+        <div class="ci-row"><div class="ci-icon">📍</div><div><h4>Address</h4><p>No.72B, Madambakkam Main Rd, opp. to Nethra Optical, Shanthi Nikethan Colony, Madambakkam, Chennai — 600126</p></div></div>
+        <div class="ci-row"><div class="ci-icon">🕐</div><div><h4>Hours</h4><p>Mon–Sat: 9:00 AM – 9:00 PM &nbsp;|&nbsp; Sun: 9:00 AM – 2:00 PM</p></div></div>
+        <div class="ci-row"><div class="ci-icon">🗺️</div><div><h4>Directions</h4><a href="https://maps.google.com/?cid=14477296041343030980">View on Google Maps</a></div></div>
       </div>
       <div class="contact-cta" data-r data-d="2">
-        <h3>Get in Touch</h3>
-        <p>Browse our latest collection or enquire about custom orders. We'd love to hear from you.</p>
-        <a href="https://wa.me/917397395378?text=Hi%20G-Space%20Interiors!%20I%20found%20your%20profile%20and%20I'm%20interested%20in%20interior%20design%20services%20for%20my%20home.%20Could%20you%20please%20share%20more%20details%20about%20your%20offerings%20and%20pricing%3F" class="cta-btn-w">💬 Chat on WhatsApp</a>
-        <a href="tel:07397 395 378" class="cta-btn-outline">📞 07397 395 378</a>
+        <h3>Get Your Free Estimate</h3>
+        <p>Contact us today and get a personalised, no-obligation estimate for your home interiors. We respond within minutes on WhatsApp.</p>
+        <a href="https://wa.me/917397395378?text=Hi!%20I%20saw%20G-Space%20Interiors%20online%20and%20would%20like%20a%20free%20estimate%20for%20my%20home%20interiors.%20Please%20share%20details!" class="cta-btn-dark">💬 Chat on WhatsApp</a>
+        <a href="tel:07397395378" class="cta-btn-outline">📞 07397 395 378</a>
       </div>
     </div>
   </div>
 </section>
-<footer>© 2026 G-Space Interiors · No.72B, Madambakkam Main Rd, opp. to nethra optical, Shanthi Nikethan Colony, Madambakkam, Chennai, Tamil Nadu 600126, India</footer>
-<a href="https://wa.me/917397395378?text=Hi%20G-Space%20Interiors!%20I%20found%20your%20profile%20and%20I'm%20interested%20in%20interior%20design%20services%20for%20my%20home.%20Could%20you%20please%20share%20more%20details%20about%20your%20offerings%20and%20pricing%3F" class="wa-fab" aria-label="WhatsApp">
+
+<footer>
+  <span style="font-family:'Playfair Display',serif;color:#C9A84C;font-size:.9rem;font-weight:700">G-Space Interiors</span>
+  <span>© 2026 · No.72B, Madambakkam Main Rd, Madambakkam, Chennai — 600126</span>
+  <span><a href="tel:07397395378">07397 395 378</a> · <a href="https://wa.me/917397395378">WhatsApp</a></span>
+</footer>
+
+<a href="https://wa.me/917397395378?text=Hi!%20I%20saw%20G-Space%20Interiors%20online%20and%20would%20like%20a%20free%20estimate%20for%20my%20home%20interiors.%20Please%20share%20details!" class="wa-fab" aria-label="WhatsApp">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <script>
-// Scroll-reveal
+// ── Gate form logic ──
+document.getElementById('g-btn').addEventListener('click',function(){
+  var name=document.getElementById('g-name').value.trim();
+  var phone=document.getElementById('g-phone').value.trim();
+  var ok=true;
+  document.getElementById('g-name-err').classList.remove('show');
+  document.getElementById('g-phone-err').classList.remove('show');
+  if(!name){document.getElementById('g-name-err').classList.add('show');ok=false;}
+  if(!/^\d{10}$/.test(phone)){document.getElementById('g-phone-err').classList.add('show');ok=false;}
+  if(!ok)return;
+  localStorage.setItem('gsSpaceVisited','1');
+  document.documentElement.classList.remove('show-gate');
+  document.body.style.overflow='';
+});
+// Allow Enter key
+['g-name','g-phone','g-area'].forEach(function(id){
+  var el=document.getElementById(id);
+  if(el)el.addEventListener('keydown',function(e){if(e.key==='Enter')document.getElementById('g-btn').click();});
+});
+
+// ── Scroll reveal ──
 (function(){
   var els=document.querySelectorAll('[data-r]');
   if(!els.length)return;
   var obs=new IntersectionObserver(function(entries){
     entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('r-in');obs.unobserve(e.target);}});
-  },{threshold:0.1,rootMargin:'0px 0px -48px 0px'});
+  },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
   els.forEach(function(el){obs.observe(el);});
 })();
-// Nav shadow
+
+// ── Nav shadow ──
 (function(){
-  var nav=document.querySelector('nav');
+  var nav=document.getElementById('nav');
   if(!nav)return;
-  window.addEventListener('scroll',function(){nav.classList.toggle('nav-s',window.scrollY>50);},{passive:true});
+  window.addEventListener('scroll',function(){nav.classList.toggle('nav-s',window.scrollY>60);},{passive:true});
 })();
-// Parallax
+
+// ── Parallax ──
 if(window.innerWidth>768){
   var hp=document.getElementById('hp'),ps=document.getElementById('ps');
   window.addEventListener('scroll',function(){
     var y=window.scrollY;
-    if(hp)hp.style.transform='translateY('+y*.3+'px)';
-    if(ps){var r=ps.closest('.ps-wrap').getBoundingClientRect();ps.style.transform='translateY('+r.top*.2+'px)';}
+    if(hp)hp.style.transform='translateY('+y*.28+'px)';
+    if(ps){var r=ps.closest('.ps-wrap').getBoundingClientRect();ps.style.transform='translateY('+r.top*.18+'px)';}
   },{passive:true});
 }
-
-// Gate form logic
-function gateSubmit(){
-  var name=document.getElementById('gate-name').value.trim();
-  var phone=document.getElementById('gate-phone').value.trim();
-  var ne=document.getElementById('gate-name-err');
-  var pe=document.getElementById('gate-phone-err');
-  var ok=true;
-  ne.classList.remove('show');
-  pe.classList.remove('show');
-  if(!name){ne.classList.add('show');ok=false;}
-  if(!/^[0-9]{10}$/.test(phone)){pe.classList.add('show');ok=false;}
-  if(!ok)return;
-  var _ts=Date.now();
-  localStorage.setItem('gsInteriorVisited',JSON.stringify({name:name,phone:phone,ts:_ts}));
-  var _log=JSON.parse(localStorage.getItem('gsVisitorLog')||'[]');
-  _log.push({name:name,phone:phone,ts:_ts});
-  localStorage.setItem('gsVisitorLog',JSON.stringify(_log));
-  // Send email notification via Web3Forms
-  (function(n,p,t){
-    var d=new Date(t);
-    var ds=d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear();
-    var ts=d.getHours()+':'+('0'+d.getMinutes()).slice(-2);
-    var msg='New visitor filled the entry form on G-Space Interiors.\n\nName: '+n+'\nPhone: '+p+'\nDate: '+ds+'\nTime: '+ts;
-    fetch('https://api.web3forms.com/submit',{
-      method:'POST',
-      headers:{'Content-Type':'application/json','Accept':'application/json'},
-      body:JSON.stringify({
-        access_key:'6d3f842e-8912-4c81-b732-f0ef31b5d9e3',
-        subject:'New Visitor — G-Space Interiors',
-        from_name:'G-Space Interiors Website',
-        name:n,
-        email:'kailashinfosoft@gmail.com',
-        message:msg
-      })
-    }).catch(function(){});
-  })(name,phone,_ts);
-  var overlay=document.getElementById('gate-overlay');
-  overlay.style.transition='opacity .4s ease';
-  overlay.style.opacity='0';
-  setTimeout(function(){overlay.classList.add('hidden');document.body.style.overflow='';},420);
-}
-document.addEventListener('DOMContentLoaded',function(){
-  var ph=document.getElementById('gate-phone');
-  if(ph)ph.addEventListener('input',function(){this.value=this.value.replace(/[^0-9]/g,'').slice(0,10);});
-  var btn=document.getElementById('gate-submit-btn');
-  if(btn)btn.addEventListener('click',gateSubmit);
-  document.querySelectorAll('.gate-input').forEach(function(i){
-    i.addEventListener('keydown',function(e){if(e.key==='Enter')gateSubmit();});
-  });
-});
-
 </script>
-</body></html>
+</body>
+</html>
