@@ -195,15 +195,15 @@ nav.scrolled{box-shadow:0 2px 32px rgba(0,0,0,.6)}
 
 /* BRANDS */
 .brands-bg{background:var(--dark3)}
-.brands-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:1px;background:rgba(255,255,255,.07);margin-top:48px;border:1px solid rgba(255,255,255,.07)}
+.brands-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:14px;margin-top:48px}
 @media(max-width:900px){.brands-strip{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:500px){.brands-strip{grid-template-columns:repeat(2,1fr)}}
-.brand-cell{background:var(--dark3);padding:30px 14px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;transition:background .2s;min-height:100px}
-.brand-cell:hover{background:#1f1f1f}
-.brand-cell img{width:80px;height:40px;object-fit:contain;filter:grayscale(1) brightness(2) opacity(.6);transition:filter .3s}
-.brand-cell:hover img{filter:grayscale(0) brightness(1) opacity(1)}
-.brand-cell span{font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);text-align:center;font-weight:600;line-height:1.4}
-.brand-cell:hover span{color:var(--gold)}
+.brand-cell{background:#fff;border-radius:6px;padding:22px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;min-height:110px;transition:transform .25s,box-shadow .25s}
+.brand-cell:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(201,168,76,.25)}
+.brand-cell img{width:100px;height:44px;object-fit:contain;filter:none;transition:transform .25s}
+.brand-cell:hover img{transform:scale(1.06)}
+.brand-cell span{font-size:.56rem;letter-spacing:.09em;text-transform:uppercase;color:#555;text-align:center;font-weight:700;line-height:1.4}
+.brand-cell .brand-fallback{font-size:.9rem;font-weight:800;color:#1a1a1a;letter-spacing:.04em;text-align:center;line-height:1.3}
 
 /* TESTIMONIALS */
 .testi-bg{background:var(--dark2)}
@@ -725,27 +725,33 @@ footer{background:#050505;border-top:1px solid rgba(201,168,76,.1);padding:40px 
     </div>
     <div class="brands-strip">
       <div class="brand-cell">
-        <img src="https://logo.clearbit.com/centuryply.com" alt="Century Plywood" onerror="this.style.display='none'">
-        <span>Century<br>Plywood &amp; Laminates</span>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/06/Century_Plyboards.svg/250px-Century_Plyboards.svg.png" alt="Century Plywood" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="brand-fallback" style="display:none">Century</span>
+        <span>Century Plywood<br>&amp; Laminates</span>
       </div>
       <div class="brand-cell">
-        <img src="https://logo.clearbit.com/greenlam.com" alt="Greenlam" onerror="this.style.display='none'">
+        <img src="https://www.greenlam.co.in/skin/frontend/ves_blue/default/images/greenlam-logo.png" alt="Greenlam" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="brand-fallback" style="display:none">Greenlam</span>
         <span>Greenlam<br>Laminates</span>
       </div>
       <div class="brand-cell">
-        <img src="https://logo.clearbit.com/advancelaminates.in" alt="Advance Laminates" onerror="this.style.display='none'">
+        <img src="https://advancelaminates.in/wp-content/uploads/2025/08/logo-new.png" alt="Advance Laminates" onerror="this.src='https://advancelaminates.in/wp-content/uploads/2023/11/ADVANCE-LOGO.jpg';this.onerror=function(){this.style.display='none';this.nextElementSibling.style.display='block'}">
+        <span class="brand-fallback" style="display:none">Advance</span>
         <span>Advance<br>Laminates</span>
       </div>
       <div class="brand-cell">
-        <img src="https://logo.clearbit.com/merinogroup.com" alt="Merino" onerror="this.style.display='none'">
+        <img src="https://www.merinogroup.com/images/logo-color2.svg" alt="Merino" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="brand-fallback" style="display:none">Merino</span>
         <span>Merino<br>Laminates</span>
       </div>
       <div class="brand-cell">
-        <img src="https://logo.clearbit.com/ebco.in" alt="Ebco" onerror="this.style.display='none'">
+        <img src="https://logo.clearbit.com/ebco.in" alt="Ebco" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="brand-fallback" style="display:none">EBCO</span>
         <span>Ebco<br>Hardware Accessories</span>
       </div>
       <div class="brand-cell">
-        <img src="https://logo.clearbit.com/hettich.com" alt="Hettich" onerror="this.style.display='none'">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Logo_of_Hettich_%28company%29.svg/250px-Logo_of_Hettich_%28company%29.svg.png" alt="Hettich" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <span class="brand-fallback" style="display:none">Hettich</span>
         <span>Hettich<br>Hardware Accessories</span>
       </div>
     </div>
