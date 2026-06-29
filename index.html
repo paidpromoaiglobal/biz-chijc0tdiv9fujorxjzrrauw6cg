@@ -88,7 +88,9 @@ nav.scrolled{box-shadow:0 2px 32px rgba(0,0,0,.6)}
 .svc-card-ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:24px;background:linear-gradient(to top,rgba(0,0,0,.8) 0%,transparent 60%)}
 .svc-icon{font-size:1.1rem;margin-bottom:8px;color:var(--gold)}
 .svc-name{font-weight:600;font-size:.95rem;color:#fff;letter-spacing:.02em}
-.svc-card:hover .svc-name{color:var(--gold)}
+.svc-card:hover .svc-name,.svc-card.touched .svc-name{color:var(--gold)}
+.svc-desc{font-size:.78rem;color:rgba(255,255,255,.8);line-height:1.55;margin-top:7px;max-height:0;overflow:hidden;opacity:0;transform:translateY(6px);transition:opacity .35s ease,transform .35s ease,max-height .35s ease}
+.svc-card:hover .svc-desc,.svc-card.touched .svc-desc{max-height:80px;opacity:1;transform:translateY(0)}
 
 /* ABOUT */
 .about-bg{background:var(--dark2)}
@@ -292,6 +294,7 @@ footer{background:#050505;border-top:1px solid rgba(201,168,76,.1);padding:40px 
         <div class="svc-card-ov">
           <div class="svc-icon">🪵</div>
           <div class="svc-name">Custom Wardrobe Design</div>
+          <p class="svc-desc">Bespoke wardrobe solutions crafted to maximise your space with elegant finishes and smart storage.</p>
         </div>
       </div>
       <div class="svc-card">
@@ -299,6 +302,7 @@ footer{background:#050505;border-top:1px solid rgba(201,168,76,.1);padding:40px 
         <div class="svc-card-ov">
           <div class="svc-icon">📺</div>
           <div class="svc-name">TV Unit &amp; Entertainment</div>
+          <p class="svc-desc">Custom TV panels and entertainment units designed to elevate your living room with style.</p>
         </div>
       </div>
       <div class="svc-card">
@@ -306,6 +310,7 @@ footer{background:#050505;border-top:1px solid rgba(201,168,76,.1);padding:40px 
         <div class="svc-card-ov">
           <div class="svc-icon">🏠</div>
           <div class="svc-name">Kitchen Interior Works</div>
+          <p class="svc-desc">Modern modular kitchens built with premium materials for lasting beauty and effortless functionality.</p>
         </div>
       </div>
       <div class="svc-card">
@@ -313,6 +318,7 @@ footer{background:#050505;border-top:1px solid rgba(201,168,76,.1);padding:40px 
         <div class="svc-card-ov">
           <div class="svc-icon">📖</div>
           <div class="svc-name">Prayer &amp; Crockery Units</div>
+          <p class="svc-desc">Beautifully crafted prayer mandirs and crockery units that bring elegance to every corner.</p>
         </div>
       </div>
       <div class="svc-card">
@@ -320,6 +326,7 @@ footer{background:#050505;border-top:1px solid rgba(201,168,76,.1);padding:40px 
         <div class="svc-card-ov">
           <div class="svc-icon">🏠</div>
           <div class="svc-name">PVC &amp; Kadappa Shelves</div>
+          <p class="svc-desc">Durable PVC and natural Kadappa stone shelves — stylish, low-maintenance, and built to last.</p>
         </div>
       </div>
       <div class="svc-card">
@@ -327,6 +334,7 @@ footer{background:#050505;border-top:1px solid rgba(201,168,76,.1);padding:40px 
         <div class="svc-card-ov">
           <div class="svc-icon">🏠</div>
           <div class="svc-name">Complete Home Interiors</div>
+          <p class="svc-desc">End-to-end interior solutions — we handle every room so you can move in stress-free.</p>
         </div>
       </div>
     </div>
@@ -685,6 +693,14 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){
     var t=document.querySelector(this.getAttribute('href'));
     if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
   });
+});
+
+// Service cards: touch to reveal description
+document.querySelectorAll('.svc-card').forEach(function(card){
+  card.addEventListener('touchstart',function(){
+    document.querySelectorAll('.svc-card').forEach(function(c){c.classList.remove('touched');});
+    this.classList.add('touched');
+  },{passive:true});
 });
 </script>
 </body>
