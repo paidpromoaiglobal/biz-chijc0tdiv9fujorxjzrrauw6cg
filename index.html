@@ -301,6 +301,43 @@ footer{background:#050505;border-top:1px solid rgba(201,168,76,.1);padding:40px 
 </head>
 <body>
 
+<!-- LOGIN GATE -->
+<div id="loginGate" style="display:none;position:fixed;inset:0;background:#0a0a0a;z-index:99999;display:flex;align-items:center;justify-content:center;flex-direction:column">
+  <div style="width:100%;max-width:380px;padding:40px 32px;border:1px solid rgba(201,168,76,.25);border-radius:4px;background:#111">
+    <div style="text-align:center;margin-bottom:32px">
+      <div style="font-family:'Playfair Display',serif;font-size:1.6rem;color:#C9A84C;letter-spacing:.06em">G-SPACE</div>
+      <div style="font-family:'Inter',sans-serif;font-size:.7rem;color:rgba(255,255,255,.4);letter-spacing:.18em;margin-top:4px">INTERIORS</div>
+      <div style="width:40px;height:1px;background:#C9A84C;margin:16px auto 0"></div>
+    </div>
+    <p style="font-family:'Inter',sans-serif;font-size:.78rem;color:rgba(255,255,255,.5);text-align:center;margin-bottom:28px;letter-spacing:.04em">Please login to continue</p>
+    <div style="margin-bottom:16px">
+      <input id="lgUser" type="text" placeholder="Username" autocomplete="username" style="width:100%;padding:12px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:#fff;font-family:'Inter',sans-serif;font-size:.85rem;border-radius:2px;outline:none;box-sizing:border-box" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='rgba(255,255,255,.12)'">
+    </div>
+    <div style="margin-bottom:24px">
+      <input id="lgPass" type="password" placeholder="Password" autocomplete="current-password" style="width:100%;padding:12px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:#fff;font-family:'Inter',sans-serif;font-size:.85rem;border-radius:2px;outline:none;box-sizing:border-box" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='rgba(255,255,255,.12)'" onkeydown="if(event.key==='Enter')doLogin()">
+    </div>
+    <div id="lgErr" style="display:none;color:#e05;font-family:'Inter',sans-serif;font-size:.75rem;text-align:center;margin-bottom:16px">Incorrect username or password</div>
+    <button onclick="doLogin()" style="width:100%;padding:14px;background:#C9A84C;color:#000;font-family:'Inter',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;border:none;border-radius:2px;cursor:pointer">LOGIN</button>
+  </div>
+</div>
+<script>
+(function(){
+  if(!localStorage.getItem('gs_auth')){
+    document.getElementById('loginGate').style.display='flex';
+  }
+})();
+function doLogin(){
+  var u=document.getElementById('lgUser').value.trim();
+  var p=document.getElementById('lgPass').value.trim();
+  if(u==='gspace'&&p==='gspace@123'){
+    localStorage.setItem('gs_auth','1');
+    document.getElementById('loginGate').style.display='none';
+  } else {
+    document.getElementById('lgErr').style.display='block';
+  }
+}
+</script>
+
 <!-- FLOATING BTNS -->
 <a href="tel:07397395378" class="fab-call" aria-label="Call">
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -542,8 +579,8 @@ footer{background:#050505;border-top:1px solid rgba(201,168,76,.1);padding:40px 
     </div>
     <div class="gallery-grid" id="galleryGrid">
       <!-- WARDROBE -->
-      <div class="gallery-item" data-cat="wardrobe"><img src="images/gallery-1.jpg" alt="Wardrobe" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Wardrobe</div><p class="gallery-ov-desc">Custom wardrobe with laminate finish and soft-close fittings, Madambakkam.</p></div></div>
-      <div class="gallery-item" data-cat="wardrobe"><img src="images/gallery-2.jpg" alt="Wardrobe" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Wardrobe</div><p class="gallery-ov-desc">Floor-to-ceiling sliding wardrobe with mirror shutters and internal LED lighting.</p></div></div>
+      <div class="gallery-item" data-cat="wardrobe" data-featured="1"><img src="images/gallery-1.jpg" alt="Wardrobe" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Wardrobe</div><p class="gallery-ov-desc">Custom wardrobe with laminate finish and soft-close fittings, Madambakkam.</p></div></div>
+      <div class="gallery-item" data-cat="wardrobe" data-featured="1"><img src="images/gallery-2.jpg" alt="Wardrobe" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Wardrobe</div><p class="gallery-ov-desc">Floor-to-ceiling sliding wardrobe with mirror shutters and internal LED lighting.</p></div></div>
       <div class="gallery-item" data-cat="wardrobe"><img src="images/gallery-3.jpg" alt="Wardrobe" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Wardrobe</div><p class="gallery-ov-desc">Bedroom wardrobe with premium Hettich soft-close hinges and Century ply.</p></div></div>
       <div class="gallery-item" data-cat="wardrobe"><img src="images/gallery-4.jpg" alt="Wardrobe" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Wardrobe</div><p class="gallery-ov-desc">Master bedroom wardrobe with dedicated drawer units and accessory trays.</p></div></div>
       <div class="gallery-item" data-cat="wardrobe"><img src="images/gallery-5.jpg" alt="Wardrobe" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Wardrobe</div><p class="gallery-ov-desc">Compact wardrobe with efficient storage layout and Merino laminate finish.</p></div></div>
@@ -551,8 +588,8 @@ footer{background:#050505;border-top:1px solid rgba(201,168,76,.1);padding:40px 
       <div class="gallery-item" data-cat="wardrobe"><img src="images/gallery-7.jpg" alt="Wardrobe" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Wardrobe</div><p class="gallery-ov-desc">Walk-in wardrobe with open shelf display and smart hanging section.</p></div></div>
       <div class="gallery-item" data-cat="wardrobe"><img src="images/gallery-8.jpg" alt="Wardrobe" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Wardrobe</div><p class="gallery-ov-desc">Children's bedroom wardrobe with colour-coordinated panel and study unit.</p></div></div>
       <!-- LIVING ROOM -->
-      <div class="gallery-item" data-cat="living"><img src="images/gallery-9.jpg" alt="Living Room" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Living Room</div><p class="gallery-ov-desc">TV unit with panel wall, warm LED backlight and matching crockery unit.</p></div></div>
-      <div class="gallery-item" data-cat="living"><img src="images/gallery-10.jpg" alt="Living Room" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Living Room</div><p class="gallery-ov-desc">Open-plan living with PVC false ceiling and concealed cove lighting.</p></div></div>
+      <div class="gallery-item" data-cat="living" data-featured="1"><img src="images/gallery-9.jpg" alt="Living Room" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Living Room</div><p class="gallery-ov-desc">TV unit with panel wall, warm LED backlight and matching crockery unit.</p></div></div>
+      <div class="gallery-item" data-cat="living" data-featured="1"><img src="images/gallery-10.jpg" alt="Living Room" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Living Room</div><p class="gallery-ov-desc">Open-plan living with PVC false ceiling and concealed cove lighting.</p></div></div>
       <div class="gallery-item" data-cat="living"><img src="images/gallery-11.jpg" alt="Living Room" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Living Room</div><p class="gallery-ov-desc">Entertainment unit with floating shelves and matte black panel accent wall.</p></div></div>
       <div class="gallery-item" data-cat="living"><img src="images/gallery-12.jpg" alt="Living Room" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Living Room</div><p class="gallery-ov-desc">Prayer unit with crockery display combined in a single elegant design.</p></div></div>
       <div class="gallery-item" data-cat="living"><img src="images/gallery-13.jpg" alt="Living Room" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Living Room</div><p class="gallery-ov-desc">Feature wall with indirect lighting and custom Kadappa shelf unit.</p></div></div>
@@ -560,16 +597,16 @@ footer{background:#050505;border-top:1px solid rgba(201,168,76,.1);padding:40px 
       <div class="gallery-item" data-cat="living"><img src="images/gallery-15.jpg" alt="Living Room" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Living Room</div><p class="gallery-ov-desc">Living space renovation with PVC shelves and premium laminate finishes.</p></div></div>
       <div class="gallery-item" data-cat="living"><img src="images/gallery-16.jpg" alt="Living Room" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Living Room</div><p class="gallery-ov-desc">Compact living room makeover with space-saving furniture and smart storage.</p></div></div>
       <!-- FULL HOME -->
-      <div class="gallery-item" data-cat="full"><img src="images/gallery-17.jpg" alt="Full Home" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Full Home</div><p class="gallery-ov-desc">Complete 2BHK interior — wardrobe, kitchen and living room in 45 days.</p></div></div>
-      <div class="gallery-item" data-cat="full"><img src="images/gallery-18.jpg" alt="Full Home" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Full Home</div><p class="gallery-ov-desc">3BHK complete renovation with custom woodwork throughout, Chennai.</p></div></div>
+      <div class="gallery-item" data-cat="full" data-featured="1"><img src="images/gallery-17.jpg" alt="Full Home" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Full Home</div><p class="gallery-ov-desc">Complete 2BHK interior — wardrobe, kitchen and living room in 45 days.</p></div></div>
+      <div class="gallery-item" data-cat="full" data-featured="1"><img src="images/gallery-18.jpg" alt="Full Home" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Full Home</div><p class="gallery-ov-desc">3BHK complete renovation with custom woodwork throughout, Chennai.</p></div></div>
       <div class="gallery-item" data-cat="full"><img src="images/gallery-19.jpg" alt="Full Home" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Full Home</div><p class="gallery-ov-desc">Full home interior with Century ply woodwork in every room, Madambakkam.</p></div></div>
       <div class="gallery-item" data-cat="full"><img src="images/gallery-20.jpg" alt="Full Home" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Full Home</div><p class="gallery-ov-desc">New home complete fit-out: modular kitchen, wardrobes and TV unit.</p></div></div>
       <div class="gallery-item" data-cat="full"><img src="images/gallery-21.jpg" alt="Full Home" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Full Home</div><p class="gallery-ov-desc">Complete flat interior with false ceiling, electrical and all woodwork.</p></div></div>
       <div class="gallery-item" data-cat="full"><img src="images/gallery-22.jpg" alt="Full Home" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Full Home</div><p class="gallery-ov-desc">Premium home interior with Hettich fittings and Greenlam laminates throughout.</p></div></div>
       <div class="gallery-item" data-cat="full"><img src="images/gallery-23.jpg" alt="Full Home" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Full Home</div><p class="gallery-ov-desc">End-to-end home interior delivered on schedule — from design to move-in.</p></div></div>
       <!-- KITCHEN -->
-      <div class="gallery-item" data-cat="kitchen"><img src="images/kitchen-1.jpg" alt="Kitchen" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Kitchen</div><p class="gallery-ov-desc">Modular kitchen with quartz countertop and soft-close overhead cabinets.</p></div></div>
-      <div class="gallery-item" data-cat="kitchen"><img src="images/kitchen-2.jpg" alt="Kitchen" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Kitchen</div><p class="gallery-ov-desc">L-shaped kitchen with under-counter storage and matte laminate shutters.</p></div></div>
+      <div class="gallery-item" data-cat="kitchen" data-featured="1"><img src="images/kitchen-1.jpg" alt="Kitchen" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Kitchen</div><p class="gallery-ov-desc">Modular kitchen with quartz countertop and soft-close overhead cabinets.</p></div></div>
+      <div class="gallery-item" data-cat="kitchen" data-featured="1"><img src="images/kitchen-2.jpg" alt="Kitchen" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Kitchen</div><p class="gallery-ov-desc">L-shaped kitchen with under-counter storage and matte laminate shutters.</p></div></div>
       <div class="gallery-item" data-cat="kitchen"><img src="images/kitchen-3.jpg" alt="Kitchen" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Kitchen</div><p class="gallery-ov-desc">Straight modular kitchen with tall unit and integrated appliance housing.</p></div></div>
       <div class="gallery-item" data-cat="kitchen"><img src="images/kitchen-4.jpg" alt="Kitchen" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Kitchen</div><p class="gallery-ov-desc">U-shaped kitchen with granite top and full-height backsplash tiles.</p></div></div>
       <div class="gallery-item" data-cat="kitchen"><img src="images/kitchen-5.jpg" alt="Kitchen" loading="lazy"><div class="gallery-ov"><div class="gallery-ov-title">Kitchen</div><p class="gallery-ov-desc">Kitchen with pullout drawers, spice rack and stainless steel sink unit.</p></div></div>
@@ -848,15 +885,21 @@ if(window.innerWidth>768){
 (function(){
   var btns=document.querySelectorAll('.gf-btn');
   var items=document.querySelectorAll('.gallery-item');
+  function applyFilter(f){
+    items.forEach(function(item){
+      if(f==='all'){
+        item.classList.toggle('hidden',!item.dataset.featured);
+      } else {
+        item.classList.toggle('hidden',item.dataset.cat!==f);
+      }
+    });
+  }
+  applyFilter('all');
   btns.forEach(function(btn){
     btn.addEventListener('click',function(){
       btns.forEach(function(b){b.classList.remove('active')});
       btn.classList.add('active');
-      var f=btn.dataset.filter;
-      items.forEach(function(item){
-        if(f==='all'||item.dataset.cat===f){item.classList.remove('hidden');}
-        else{item.classList.add('hidden');}
-      });
+      applyFilter(btn.dataset.filter);
     });
   });
 })();
