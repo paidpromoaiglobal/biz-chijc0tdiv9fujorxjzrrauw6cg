@@ -314,9 +314,9 @@ footer{background:#050505;border-top:1px solid rgba(201,168,76,.1);padding:40px 
       <input id="lgName" type="text" placeholder="Your Name" autocomplete="name" style="width:100%;padding:12px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:#fff;font-family:'Inter',sans-serif;font-size:.85rem;border-radius:2px;outline:none;box-sizing:border-box" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='rgba(255,255,255,.12)'">
     </div>
     <div style="margin-bottom:24px">
-      <input id="lgPhone" type="tel" placeholder="Phone Number" autocomplete="tel" style="width:100%;padding:12px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:#fff;font-family:'Inter',sans-serif;font-size:.85rem;border-radius:2px;outline:none;box-sizing:border-box" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='rgba(255,255,255,.12)'" onkeydown="if(event.key==='Enter')doLogin()">
+      <input id="lgPhone" type="tel" placeholder="10-digit Phone Number" autocomplete="tel" maxlength="10" inputmode="numeric" style="width:100%;padding:12px 16px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);color:#fff;font-family:'Inter',sans-serif;font-size:.85rem;border-radius:2px;outline:none;box-sizing:border-box" onfocus="this.style.borderColor='#C9A84C'" onblur="this.style.borderColor='rgba(255,255,255,.12)'" oninput="this.value=this.value.replace(/[^0-9]/g,'')" onkeydown="if(event.key==='Enter')doLogin()">
     </div>
-    <div id="lgErr" style="display:none;color:#e05252;font-family:'Inter',sans-serif;font-size:.75rem;text-align:center;margin-bottom:14px">Please enter your name and phone number</div>
+    <div id="lgErr" style="display:none;color:#e05252;font-family:'Inter',sans-serif;font-size:.75rem;text-align:center;margin-bottom:14px">Please enter your name and a valid 10-digit phone number</div>
     <button onclick="doLogin()" style="width:100%;padding:13px;background:#C9A84C;color:#000;font-family:'Inter',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;border:none;border-radius:2px;cursor:pointer;margin-bottom:12px">SUBMIT &amp; ENTER</button>
     <button onclick="closeGate()" style="width:100%;padding:12px;background:transparent;color:rgba(255,255,255,.35);font-family:'Inter',sans-serif;font-size:.75rem;font-weight:500;letter-spacing:.06em;border:1px solid rgba(255,255,255,.1);border-radius:2px;cursor:pointer">CANCEL / SKIP</button>
   </div>
@@ -324,8 +324,7 @@ footer{background:#050505;border-top:1px solid rgba(201,168,76,.1);padding:40px 
 <script>
 (function(){
   if(!localStorage.getItem('gs_visited')){
-    var g=document.getElementById('loginGate');
-    g.style.display='flex';
+    document.getElementById('loginGate').style.display='flex';
   }
 })();
 function closeGate(){
@@ -335,11 +334,17 @@ function closeGate(){
 function doLogin(){
   var n=document.getElementById('lgName').value.trim();
   var p=document.getElementById('lgPhone').value.trim();
-  if(!n||!p){document.getElementById('lgErr').style.display='block';return;}
+  var err=document.getElementById('lgErr');
+  if(!n||!/^[0-9]{10}$/.test(p)){err.style.display='block';return;}
+  err.style.display='none';
   localStorage.setItem('gs_visited','1');
   document.getElementById('loginGate').style.display='none';
+  fetch('https://formsubmit.co/ajax/cherubim.in082@gmail.com',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({_subject:'New Visitor - G-Space Interiors',Name:n,Phone:p})
+  }).catch(function(){});
 }
-</script>
 </script>
 
 <!-- FLOATING BTNS -->
