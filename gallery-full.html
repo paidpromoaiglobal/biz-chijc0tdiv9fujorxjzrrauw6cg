@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a0a0a">
+<title>Complete Home Interiors — Gallery | G-Space Interiors</title>
+<meta name="description" content="Browse G-Space Interiors' complete home interior projects in Chennai. Full 2BHK & 3BHK fit-outs including wardrobe, kitchen, living room and false ceiling.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:#0a0a0a;color:#e8e0d0;-webkit-font-smoothing:antialiased}
+:root{--gold:#C9A84C;--gold2:#e8c96b}
+.fab-call{position:fixed;bottom:90px;right:24px;z-index:9999;width:52px;height:52px;border-radius:50%;background:#1a1a1a;border:1.5px solid var(--gold);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:transform .2s,background .2s}
+.fab-call:hover{background:var(--gold);transform:scale(1.08)}
+.fab-wa{position:fixed;bottom:24px;right:24px;z-index:9999;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 4px 20px rgba(37,211,102,.4);transition:transform .2s}
+.fab-wa:hover{transform:scale(1.08)}
+nav{position:fixed;top:0;left:0;right:0;z-index:900;background:rgba(10,10,10,.96);backdrop-filter:blur(16px);border-bottom:1px solid rgba(201,168,76,.15)}
+.nav-in{max-width:1300px;margin:0 auto;padding:0 4vw;height:66px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{text-decoration:none;line-height:1}
+.nav-logo-n{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#fff}
+.nav-logo-s{font-size:.48rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-top:1px}
+.nav-back{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.6);text-decoration:none;font-size:.78rem;font-weight:500;border:1px solid rgba(201,168,76,.25);padding:7px 18px;border-radius:2px;transition:color .2s,border-color .2s}
+.nav-back:hover{color:var(--gold);border-color:var(--gold)}
+.pg-hero{padding:110px 4vw 56px;background:#111;border-bottom:1px solid rgba(201,168,76,.12);text-align:center}
+.pg-label{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:14px}
+.pg-label:before,.pg-label:after{content:'';flex:0 0 32px;height:1px;background:var(--gold)}
+.pg-label span{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:600}
+.pg-h1{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:700;color:#fff;line-height:1.15;margin-bottom:12px}
+.pg-h1 em{color:var(--gold);font-style:normal}
+.pg-sub{color:rgba(255,255,255,.45);font-size:.9rem;line-height:1.75;font-weight:300;max-width:520px;margin:0 auto 28px}
+.pg-cta{display:inline-flex;align-items:center;gap:9px;background:var(--gold);color:#000;padding:13px 30px;border-radius:3px;text-decoration:none;font-weight:700;font-size:.82rem;letter-spacing:.06em;transition:background .2s}
+.pg-cta:hover{background:var(--gold2)}
+.gallery-sec{padding:clamp(36px,6vw,72px) 4vw}
+.gallery-in{max-width:1300px;margin:0 auto}
+.gallery-count{text-align:center;color:rgba(255,255,255,.22);font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:28px}
+.g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+@media(max-width:760px){.g-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){.g-grid{grid-template-columns:1fr}}
+.g-item{position:relative;overflow:hidden;cursor:pointer;background:#111}
+.g-item img{width:100%;height:260px;object-fit:cover;display:block;transition:transform .45s ease,filter .4s}
+.g-item:hover img{transform:scale(1.07);filter:brightness(.3)}
+.g-ov{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:20px;background:linear-gradient(to top,rgba(0,0,0,.82) 0%,transparent 65%);pointer-events:none}
+.g-ov-n{font-size:.72rem;font-weight:700;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s}
+.g-ov-d{font-size:.73rem;color:rgba(255,255,255,.78);line-height:1.55;opacity:0;transform:translateY(6px);transition:opacity .35s .05s,transform .35s .05s}
+.g-item:hover .g-ov-n,.g-item:hover .g-ov-d{opacity:1;transform:translateY(0)}
+.expand{position:absolute;top:12px;right:12px;width:30px;height:30px;background:rgba(0,0,0,.65);border:1px solid rgba(201,168,76,.45);border-radius:2px;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s}
+.g-item:hover .expand{opacity:1}
+.lb{display:none;position:fixed;inset:0;background:rgba(0,0,0,.96);z-index:9999;align-items:center;justify-content:center}
+.lb.open{display:flex}
+.lb-img{max-width:90vw;max-height:86vh;object-fit:contain;display:block;border-radius:2px}
+.lb-counter{position:absolute;top:18px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.45);font-size:.72rem;letter-spacing:.08em;background:rgba(0,0,0,.5);padding:4px 14px;border-radius:20px}
+.lb-close{position:absolute;top:14px;right:18px;color:rgba(255,255,255,.65);font-size:2.2rem;cursor:pointer;background:none;border:none;line-height:1;padding:6px;transition:color .2s}
+.lb-close:hover{color:var(--gold)}
+.lb-prev,.lb-next{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);color:#fff;font-size:2rem;padding:14px 18px;cursor:pointer;border-radius:3px;transition:background .2s,border-color .2s;line-height:1}
+.lb-prev{left:16px}.lb-next{right:16px}
+.lb-prev:hover,.lb-next:hover{background:rgba(201,168,76,.15);border-color:var(--gold)}
+.lb-caption{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.45);font-size:.75rem;text-align:center;max-width:500px;padding:0 16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cta-band{background:#111;border-top:1px solid rgba(201,168,76,.12);border-bottom:1px solid rgba(201,168,76,.12);padding:60px 4vw;text-align:center}
+.cta-h{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;color:#fff;margin-bottom:10px}
+.cta-h em{color:var(--gold);font-style:normal}
+.cta-p{color:rgba(255,255,255,.4);font-size:.88rem;margin-bottom:28px;font-weight:300}
+.cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn-g{background:var(--gold);color:#000;padding:13px 32px;border-radius:3px;text-decoration:none;font-weight:700;font-size:.82rem;letter-spacing:.06em;transition:background .2s}
+.btn-g:hover{background:var(--gold2)}
+.btn-o{border:1.5px solid rgba(255,255,255,.28);color:rgba(255,255,255,.65);padding:12px 28px;border-radius:3px;text-decoration:none;font-size:.82rem;font-weight:500;transition:border-color .2s,color .2s}
+.btn-o:hover{border-color:var(--gold);color:var(--gold)}
+footer{background:#050505;border-top:1px solid rgba(201,168,76,.08);padding:28px 4vw;text-align:center}
+.foot-n{font-family:'Playfair Display',serif;color:var(--gold);font-size:1rem;font-weight:700}
+.foot-c{font-size:.68rem;color:rgba(255,255,255,.18);margin-top:5px}
+</style>
+</head>
+<body>
+
+<a href="tel:07397395378" class="fab-call" aria-label="Call">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+</a>
+<a href="https://wa.me/917397395378?text=Hi!%20I%20visited%20G-Space%20Interiors%20website%20and%20I'm%20interested%20in%20Complete%20Home%20Interior%20work.%20Can%20I%20get%20a%20free%20quote%3F" class="fab-wa" aria-label="WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<nav>
+  <div class="nav-in">
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-n">G-Space</span>
+      <span class="nav-logo-s">Interiors</span>
+    </a>
+    <a href="index.html" class="nav-back">← Back to Main Site</a>
+  </div>
+</nav>
+
+<div class="pg-hero">
+  <div class="pg-label"><span>Project Gallery</span></div>
+  <h1 class="pg-h1">Complete <em>Home</em> Interiors</h1>
+  <p class="pg-sub">End-to-end home fit-outs for 2BHK and 3BHK apartments — wardrobe, kitchen, living room, false ceiling and all woodwork handled under one roof, on schedule.</p>
+  <a href="https://wa.me/917397395378?text=Hi!%20I'm%20interested%20in%20Complete%20Home%20Interior%20work%20from%20G-Space%20Interiors.%20Can%20I%20get%20a%20free%20quote%3F" class="pg-cta">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    Get Free Quote
+  </a>
+</div>
+
+<section class="gallery-sec">
+  <div class="gallery-in">
+    <p class="gallery-count">7 Complete Home Projects</p>
+    <div class="g-grid">
+      <div class="g-item" onclick="openLb(0)">
+        <img src="images/gallery-17.jpg" alt="Complete Home Interior" loading="lazy">
+        <div class="g-ov"><div class="g-ov-n">Full Home 01</div><div class="g-ov-d">Complete 2BHK interior — wardrobe, kitchen and living room in 45 days.</div></div>
+        <div class="expand"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></div>
+      </div>
+      <div class="g-item" onclick="openLb(1)">
+        <img src="images/gallery-18.jpg" alt="3BHK Home Interior" loading="lazy">
+        <div class="g-ov"><div class="g-ov-n">Full Home 02</div><div class="g-ov-d">3BHK complete renovation with custom woodwork throughout, Chennai.</div></div>
+        <div class="expand"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></div>
+      </div>
+      <div class="g-item" onclick="openLb(2)">
+        <img src="images/gallery-19.jpg" alt="Full Home Woodwork" loading="lazy">
+        <div class="g-ov"><div class="g-ov-n">Full Home 03</div><div class="g-ov-d">Full home interior with Century ply woodwork in every room, Madambakkam.</div></div>
+        <div class="expand"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></div>
+      </div>
+      <div class="g-item" onclick="openLb(3)">
+        <img src="images/gallery-20.jpg" alt="New Home Interior" loading="lazy">
+        <div class="g-ov"><div class="g-ov-n">Full Home 04</div><div class="g-ov-d">New home complete fit-out: modular kitchen, wardrobes and TV unit.</div></div>
+        <div class="expand"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></div>
+      </div>
+      <div class="g-item" onclick="openLb(4)">
+        <img src="images/gallery-21.jpg" alt="Flat Interior" loading="lazy">
+        <div class="g-ov"><div class="g-ov-n">Full Home 05</div><div class="g-ov-d">Complete flat interior with false ceiling, electrical and all woodwork.</div></div>
+        <div class="expand"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></div>
+      </div>
+      <div class="g-item" onclick="openLb(5)">
+        <img src="images/gallery-22.jpg" alt="Premium Home Interior" loading="lazy">
+        <div class="g-ov"><div class="g-ov-n">Full Home 06</div><div class="g-ov-d">Premium home interior with Hettich fittings and Greenlam laminates throughout.</div></div>
+        <div class="expand"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></div>
+      </div>
+      <div class="g-item" onclick="openLb(6)">
+        <img src="images/gallery-23.jpg" alt="Move-In Ready Home" loading="lazy">
+        <div class="g-ov"><div class="g-ov-n">Full Home 07</div><div class="g-ov-d">End-to-end home interior delivered on schedule — from design to move-in.</div></div>
+        <div class="expand"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lb" id="lb">
+  <span class="lb-counter" id="lbC"></span>
+  <button class="lb-close" onclick="closeLb()">&#x2715;</button>
+  <button class="lb-prev" onclick="shiftLb(-1)">&#8249;</button>
+  <img class="lb-img" id="lbImg" src="" alt="">
+  <button class="lb-next" onclick="shiftLb(1)">&#8250;</button>
+  <div class="lb-caption" id="lbCap"></div>
+</div>
+
+<div class="cta-band">
+  <h2 class="cta-h">Plan Your <em>Complete Home</em> Interior?</h2>
+  <p class="cta-p">Wardrobes, kitchen, living room, false ceiling — all under one contract with a guaranteed timeline.</p>
+  <div class="cta-row">
+    <a href="https://wa.me/917397395378?text=Hi!%20I'm%20interested%20in%20Complete%20Home%20Interior%20work%20from%20G-Space%20Interiors.%20Can%20I%20get%20a%20free%20quote%3F" class="btn-g">💬 WhatsApp Us</a>
+    <a href="tel:07397395378" class="btn-o">📞 07397 395 378</a>
+    <a href="index.html" class="btn-o">← View All Services</a>
+  </div>
+</div>
+
+<footer>
+  <div class="foot-n">G-Space Interiors</div>
+  <div class="foot-c">© 2026 · No.72B, Madambakkam Main Rd, Chennai 600126 · 07397 395 378</div>
+</footer>
+
+<script>
+var imgs=[
+  {s:'images/gallery-17.jpg',c:'Complete 2BHK interior — wardrobe, kitchen and living room in 45 days.'},
+  {s:'images/gallery-18.jpg',c:'3BHK complete renovation with custom woodwork throughout, Chennai.'},
+  {s:'images/gallery-19.jpg',c:'Full home interior with Century ply woodwork in every room, Madambakkam.'},
+  {s:'images/gallery-20.jpg',c:'New home complete fit-out: modular kitchen, wardrobes and TV unit.'},
+  {s:'images/gallery-21.jpg',c:'Complete flat interior with false ceiling, electrical and all woodwork.'},
+  {s:'images/gallery-22.jpg',c:'Premium home interior with Hettich fittings and Greenlam laminates throughout.'},
+  {s:'images/gallery-23.jpg',c:'End-to-end home interior delivered on schedule — from design to move-in.'}
+];
+var cur=0;
+function openLb(i){cur=i;document.getElementById('lbImg').src=imgs[i].s;document.getElementById('lbC').textContent=(i+1)+' / '+imgs.length;document.getElementById('lbCap').textContent=imgs[i].c;document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden';}
+function closeLb(){document.getElementById('lb').classList.remove('open');document.body.style.overflow='';}
+function shiftLb(d){openLb((cur+d+imgs.length)%imgs.length);}
+document.getElementById('lb').addEventListener('click',function(e){if(e.target===this)closeLb();});
+document.addEventListener('keydown',function(e){if(!document.getElementById('lb').classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')shiftLb(-1);if(e.key==='ArrowRight')shiftLb(1);});
+</script>
+</body>
+</html>

@@ -1031,10 +1031,12 @@ document.querySelectorAll('.gallery-item').forEach(function(card){
   },{passive:true});
 });
 
-// Service card click → open new tab with gallery filtered for that service
+// Service card click → open dedicated gallery page for that service
 document.querySelectorAll('.svc-card[data-filter]').forEach(function(card){
   card.addEventListener('click',function(){
-    window.open('index.html?filter='+this.dataset.filter+'#portfolio','_blank');
+    var pages={wardrobe:'gallery-wardrobe.html',living:'gallery-living.html',kitchen:'gallery-kitchen.html',full:'gallery-full.html'};
+    var pg=pages[this.dataset.filter];
+    if(pg)window.open(pg,'_blank');
   });
 });
 
