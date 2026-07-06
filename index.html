@@ -98,6 +98,8 @@ nav.scrolled{box-shadow:0 2px 32px rgba(0,0,0,.6)}
 .svc-card:hover .svc-name,.svc-card.touched .svc-name{color:var(--gold)}
 .svc-desc{font-size:.78rem;color:rgba(255,255,255,.8);line-height:1.55;margin-top:7px;max-height:0;overflow:hidden;opacity:0;transform:translateY(6px);transition:opacity .35s ease,transform .35s ease,max-height .35s ease}
 .svc-card:hover .svc-desc,.svc-card.touched .svc-desc{max-height:80px;opacity:1;transform:translateY(0)}
+.svc-explore{position:absolute;top:12px;right:12px;font-size:.58rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);background:rgba(0,0,0,.72);padding:4px 10px;border:1px solid rgba(201,168,76,.45);border-radius:2px;z-index:2;opacity:0;transition:opacity .35s;pointer-events:none}
+.svc-card:hover .svc-explore,.svc-card.touched .svc-explore{opacity:1}
 
 /* ABOUT */
 .about-bg{background:var(--dark2)}
@@ -390,7 +392,7 @@ function doLogin(){
       <a href="#portfolio" class="btn-ghost">View Our Work</a>
     </div>
     <div class="hero-stats">
-      <div class="hstat"><div class="hstat-n">74+</div><div class="hstat-l">Happy Clients</div></div>
+      <div class="hstat"><div class="hstat-n">82</div><div class="hstat-l">Happy Clients</div></div>
       <div class="hstat"><div class="hstat-n">5★</div><div class="hstat-l">Google Rating</div></div>
       <div class="hstat"><div class="hstat-n">6+</div><div class="hstat-l">Years Experience</div></div>
       <div class="hstat"><div class="hstat-n">100%</div><div class="hstat-l">Satisfaction</div></div>
@@ -401,7 +403,7 @@ function doLogin(){
 <!-- STATS BAR -->
 <div class="stats-bar">
   <div class="stats-bar-in">
-    <div class="sbar"><div class="sbar-n">74+</div><div class="sbar-l">Happy Clients</div></div>
+    <div class="sbar"><div class="sbar-n">82</div><div class="sbar-l">Happy Clients</div></div>
     <div class="sbar"><div class="sbar-n">5★</div><div class="sbar-l">Google Rating</div></div>
     <div class="sbar"><div class="sbar-n">6+</div><div class="sbar-l">Years of Craft</div></div>
     <div class="sbar"><div class="sbar-n">100%</div><div class="sbar-l">On-Time Delivery</div></div>
@@ -417,53 +419,59 @@ function doLogin(){
       <p class="sec-sub">Every space tells a story. We craft yours with meticulous attention to detail, premium materials, and time-tested craftsmanship.</p>
     </div>
     <div class="svc-grid">
-      <div class="svc-card">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&fit=crop" alt="Custom Wardrobe" loading="lazy">
+      <div class="svc-card" data-filter="wardrobe">
+        <img src="images/gallery-1.jpg" alt="Custom Wardrobe" loading="lazy">
         <div class="svc-card-ov">
           <div class="svc-icon">🪵</div>
           <div class="svc-name">Custom Wardrobe Design</div>
           <p class="svc-desc">Bespoke wardrobe solutions crafted to maximise your space with elegant finishes and smart storage.</p>
         </div>
+        <div class="svc-explore">View Gallery ↓</div>
       </div>
-      <div class="svc-card">
-        <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80&fit=crop" alt="TV Unit" loading="lazy">
+      <div class="svc-card" data-filter="living">
+        <img src="images/gallery-9.jpg" alt="TV Unit" loading="lazy">
         <div class="svc-card-ov">
           <div class="svc-icon">📺</div>
           <div class="svc-name">TV Unit &amp; Entertainment</div>
           <p class="svc-desc">Custom TV panels and entertainment units designed to elevate your living room with style.</p>
         </div>
+        <div class="svc-explore">View Gallery ↓</div>
       </div>
-      <div class="svc-card">
-        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80&fit=crop" alt="Kitchen" loading="lazy">
+      <div class="svc-card" data-filter="kitchen">
+        <img src="images/kitchen-1.jpg" alt="Kitchen" loading="lazy">
         <div class="svc-card-ov">
           <div class="svc-icon">🏠</div>
           <div class="svc-name">Kitchen Interior Works</div>
           <p class="svc-desc">Modern modular kitchens built with premium materials for lasting beauty and effortless functionality.</p>
         </div>
+        <div class="svc-explore">View Gallery ↓</div>
       </div>
-      <div class="svc-card">
-        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=600&q=80&fit=crop" alt="Prayer Unit" loading="lazy">
+      <div class="svc-card" data-filter="living">
+        <img src="images/gallery-12.jpg" alt="Prayer Unit" loading="lazy">
         <div class="svc-card-ov">
           <div class="svc-icon">📖</div>
           <div class="svc-name">Prayer &amp; Crockery Units</div>
           <p class="svc-desc">Beautifully crafted prayer mandirs and crockery units that bring elegance to every corner.</p>
         </div>
+        <div class="svc-explore">View Gallery ↓</div>
       </div>
-      <div class="svc-card">
-        <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80&fit=crop" alt="PVC Shelves" loading="lazy">
+      <div class="svc-card" data-filter="living">
+        <img src="images/gallery-15.jpg" alt="PVC Shelves" loading="lazy">
         <div class="svc-card-ov">
           <div class="svc-icon">🏠</div>
           <div class="svc-name">PVC &amp; Kadappa Shelves</div>
           <p class="svc-desc">Durable PVC and natural Kadappa stone shelves — stylish, low-maintenance, and built to last.</p>
         </div>
+        <div class="svc-explore">View Gallery ↓</div>
       </div>
-      <div class="svc-card">
-        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=600&q=80&fit=crop" alt="Full Home" loading="lazy">
+      <div class="svc-card" data-filter="full">
+        <img src="images/gallery-17.jpg" alt="Full Home" loading="lazy">
         <div class="svc-card-ov">
           <div class="svc-icon">🏠</div>
           <div class="svc-name">Complete Home Interiors</div>
           <p class="svc-desc">End-to-end interior solutions — we handle every room so you can move in stress-free.</p>
         </div>
+        <div class="svc-explore">View Gallery ↓</div>
       </div>
     </div>
   </div>
@@ -478,7 +486,7 @@ function doLogin(){
         <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=500&q=80&fit=crop" alt="G-Space project" class="about-img-float" loading="lazy">
         <div class="about-badge">
           <div class="about-badge-n">5.0★</div>
-          <div class="about-badge-l">74+ Verified Reviews</div>
+          <div class="about-badge-l">82 Google Reviews</div>
         </div>
       </div>
       <div>
@@ -634,44 +642,68 @@ function doLogin(){
   </div>
 </section>
 
-<!-- REELS -->
+<!-- FOLLOW OUR WORK -->
 <section class="sec reels-bg">
   <div class="sec-in">
     <div class="reels-head">
       <div>
-        <div class="sec-label"><span>Latest Reels</span></div>
+        <div class="sec-label"><span>YouTube &amp; Instagram</span></div>
         <h2 class="sec-h2">Follow Our <em>Work</em></h2>
-        <p style="color:rgba(255,255,255,.4);font-size:.82rem;margin-top:4px">Updated daily from our Instagram</p>
+        <p style="color:rgba(255,255,255,.4);font-size:.82rem;margin-top:4px">Latest projects from our YouTube &amp; Instagram</p>
       </div>
-      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
-        <a href="#" class="follow-btn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="#0a0a0a"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#0a0a0a" stroke-width="2"/></svg>
-          Follow Us
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
+        <a href="https://www.instagram.com/gspaceinteriors/" target="_blank" rel="noopener" class="follow-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="#111"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#111" stroke-width="2"/></svg>
+          @gspaceinteriors
         </a>
-        <div class="reels-nav">
-          <button>&#8249;</button>
-          <button>&#8250;</button>
-        </div>
+        <a href="https://www.youtube.com/channel/UClhuwPxr9uawlREEnwLkmog" target="_blank" rel="noopener" class="follow-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M22.5 6.8s-.3-1.9-1.1-2.8c-1-1.1-2.2-1.1-2.7-1.2C16 2.7 12 2.7 12 2.7s-4 0-6.7.1c-.5.1-1.7.1-2.7 1.2-.8.9-1.1 2.8-1.1 2.8S1.2 9 1.2 11.2v2c0 2.2.3 4.4.3 4.4s.3 1.9 1.1 2.8c1 1.1 2.4 1.1 3 1.1C7.8 21.8 12 21.8 12 21.8s4 0 6.7-.3c.5-.1 1.7-.1 2.7-1.2.8-.9 1.1-2.8 1.1-2.8s.3-2.2.3-4.4v-2c0-2.2-.3-4.4-.3-4.3zM9.7 15.3V8.9l6.8 3.2-6.8 3.2z" fill="currentColor"/></svg>
+          Subscribe
+        </a>
       </div>
     </div>
+    <!-- YouTube Videos Row 1 -->
     <div class="reels-grid">
-      <div class="reel-item">
-        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=400&q=80&fit=crop" alt="Reel 1" loading="lazy">
-        <div class="reel-play"><div class="reel-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-        <div class="reel-caption">Custom wardrobe transformation — before &amp; after</div>
+      <div class="reel-item" style="height:300px;overflow:hidden;background:#000">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/seFrtOyC2M0" title="Stunning home interior project in Chennai" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display:block;border:none"></iframe>
       </div>
-      <div class="reel-item">
-        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&q=80&fit=crop" alt="Reel 2" loading="lazy">
-        <div class="reel-play"><div class="reel-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-        <div class="reel-caption">Dream kitchen installation, Chennai</div>
+      <div class="reel-item" style="height:300px;overflow:hidden;background:#000">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/VBncRNJT2Qk" title="Full interior handover - modern minimalist duplex" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display:block;border:none"></iframe>
       </div>
-      <div class="reel-item">
-        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=80&fit=crop" alt="Reel 3" loading="lazy">
-        <div class="reel-play"><div class="reel-play-btn"><svg width="18" height="18" viewBox="0 0 24 24" fill="white"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-        <div class="reel-caption">Bedroom wardrobe — full reveal</div>
+      <div class="reel-item" style="height:300px;overflow:hidden;background:#000">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mQAKqTeywiY" title="Full modular kitchen - home interiors Medavakkam" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display:block;border:none"></iframe>
       </div>
     </div>
-    <p class="reels-note">Sample content shown — connect Instagram to display live reels</p>
+    <!-- YouTube Videos Row 2 -->
+    <div class="reels-grid" style="margin-top:3px">
+      <div class="reel-item" style="height:300px;overflow:hidden;background:#000">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/vSoGj4Tpbm0" title="3BHK home interior - modular kitchen wardrobe TV" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display:block;border:none"></iframe>
+      </div>
+      <div class="reel-item" style="height:300px;overflow:hidden;background:#000">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SOkm7Fh2hfU" title="Minimalist home interior in Chennai" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display:block;border:none"></iframe>
+      </div>
+      <div class="reel-item" style="height:300px;overflow:hidden;background:#000">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/JSAdQU7hPb4" title="Wall decor design for home - best interior solutions Madambakkam" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="display:block;border:none"></iframe>
+      </div>
+    </div>
+    <!-- Instagram Section -->
+    <div style="margin-top:48px;text-align:center">
+      <p style="color:rgba(255,255,255,.3);font-size:.65rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;margin-bottom:24px">Also Follow Us on Instagram</p>
+      <div style="display:flex;justify-content:center">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DSgeXyVk26y/?utm_source=ig_embed" data-instgrm-version="14" style="background:#FFF;border:0;border-radius:3px;box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15);margin:1px auto;max-width:540px;min-width:326px;padding:0;width:100%">
+          <div style="padding:16px;text-align:center">
+            <a href="https://www.instagram.com/p/DSgeXyVk26y/" target="_blank" rel="noopener" style="color:#000;font-family:Arial,sans-serif;font-size:14px;font-style:normal;font-weight:normal;line-height:17px">View this post on Instagram — G Space Interiors @gspaceinteriors</a>
+          </div>
+        </blockquote>
+      </div>
+      <div style="margin-top:20px">
+        <a href="https://www.instagram.com/gspaceinteriors/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.22);color:rgba(255,255,255,.65);padding:11px 26px;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-decoration:none;transition:border-color .2s,color .2s" onmouseover="this.style.borderColor='#C9A84C';this.style.color='#C9A84C'" onmouseout="this.style.borderColor='rgba(255,255,255,.22)';this.style.color='rgba(255,255,255,.65)'">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="#111"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#111" stroke-width="2"/></svg>
+          @gspaceinteriors &nbsp;·&nbsp; Follow on Instagram
+        </a>
+      </div>
+    </div>
+    <script async src="//www.instagram.com/embed.js"></script>
   </div>
 </section>
 
@@ -688,41 +720,65 @@ function doLogin(){
           <div class="testi-slide">
             <div class="testi-card">
               <div class="testi-stars">★★★★★</div>
-              <p class="testi-quote">"We got our modular kitchen done by G-Space and we couldn't be happier. The quality of materials and finishing is outstanding. Worth every rupee spent."</p>
+              <p class="testi-quote">"Got my modular kitchen done by G-Space Interiors. The quality is top notch — Century ply, Greenlam shutters, Hettich soft-close hinges. Everything was delivered exactly on time. Very happy with the work. Highly recommend!"</p>
+              <div class="testi-author">Suresh Kumar</div>
+              <div class="testi-role">Client · Madambakkam</div>
+            </div>
+          </div>
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"G-Space completed our full 2BHK interior in under 45 days as promised. Wardrobe, kitchen, TV unit — everything looks premium. Mr. Gopalakrishnan personally supervised the work. Transparent pricing, zero hidden charges."</p>
+              <div class="testi-author">Deepa Krishnaswamy</div>
+              <div class="testi-role">Client · Tambaram</div>
+            </div>
+          </div>
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"Excellent wardrobe work. The sliding mirror shutters look very premium and the Hettich soft-close fittings work perfectly. Team was very neat and professional. Will definitely call them again for kitchen work."</p>
+              <div class="testi-author">Karthik Murugan</div>
+              <div class="testi-role">Client · Medavakkam</div>
+            </div>
+          </div>
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"We got both kitchen and wardrobe done. The pricing was fully transparent — no surprise charges at the end. Quality is outstanding and delivery was on schedule. Our home looks like a showroom now!"</p>
+              <div class="testi-author">Sowmya Raghunathan</div>
+              <div class="testi-role">Client · Kelambakkam</div>
+            </div>
+          </div>
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"The TV unit and crockery unit they built for our living room is absolutely beautiful. The LED backlight panel they suggested really transformed the space. Very happy with the outcome and the team's professionalism."</p>
+              <div class="testi-author">Venkatesh Srinivasan</div>
+              <div class="testi-role">Client · Sholinganallur</div>
+            </div>
+          </div>
+          <div class="testi-slide">
+            <div class="testi-card">
+              <div class="testi-stars">★★★★★</div>
+              <p class="testi-quote">"Best interior team in Chennai. Very honest pricing with no hidden charges. Delivery was on time. The team is highly skilled and the materials they use are genuine premium quality. Totally worth it."</p>
               <div class="testi-author">Priya Nair</div>
-              <div class="testi-role">Client, Tambaram</div>
+              <div class="testi-role">Client · Velachery</div>
             </div>
           </div>
           <div class="testi-slide">
             <div class="testi-card">
               <div class="testi-stars">★★★★★</div>
-              <p class="testi-quote">"G-Space transformed our living room and bedroom completely. The team was punctual, professional and the work quality is just excellent. Highly recommend!"</p>
-              <div class="testi-author">Rajesh Kumar</div>
-              <div class="testi-role">Client, Madambakkam</div>
-            </div>
-          </div>
-          <div class="testi-slide">
-            <div class="testi-card">
-              <div class="testi-stars">★★★★★</div>
-              <p class="testi-quote">"From the first consultation to final handover, the experience was seamless. Our wardrobe and kitchen look stunning. G-Space kept every promise they made."</p>
-              <div class="testi-author">Meena Subramaniam</div>
-              <div class="testi-role">Client, Perungudi</div>
-            </div>
-          </div>
-          <div class="testi-slide">
-            <div class="testi-card">
-              <div class="testi-stars">★★★★★</div>
-              <p class="testi-quote">"Excellent work on our complete home interior. The attention to detail and use of premium materials really shows. We get compliments from everyone who visits."</p>
+              <p class="testi-quote">"G-Space did our complete home interior including false ceiling and electrical work. One point of contact for everything — that saved us so much stress. Excellent workmanship. We get compliments from everyone who visits."</p>
               <div class="testi-author">Anand Krishnamurthy</div>
-              <div class="testi-role">Client, Sholinganallur</div>
+              <div class="testi-role">Client · Perungudi</div>
             </div>
           </div>
           <div class="testi-slide">
             <div class="testi-card">
               <div class="testi-stars">★★★★★</div>
-              <p class="testi-quote">"Best interior work in Chennai. Very honest pricing, no hidden charges, and the delivery was on time. The team is very skilled and professional."</p>
-              <div class="testi-author">Lakshmi Venkatesh</div>
-              <div class="testi-role">Client, Velachery</div>
+              <p class="testi-quote">"From consultation to handover the entire process was smooth. G-Space understood our requirements, suggested the right laminate colours, and delivered everything beautifully. Highly recommend for anyone in Chennai looking for honest interior work."</p>
+              <div class="testi-author">Rajesh Balakrishnan</div>
+              <div class="testi-role">Client · Madambakkam</div>
             </div>
           </div>
         </div>
@@ -973,6 +1029,20 @@ document.querySelectorAll('.gallery-item').forEach(function(card){
     document.querySelectorAll('.gallery-item').forEach(function(c){c.classList.remove('touched');});
     this.classList.add('touched');
   },{passive:true});
+});
+
+// Service card click → scroll to gallery + apply filter
+document.querySelectorAll('.svc-card[data-filter]').forEach(function(card){
+  card.addEventListener('click',function(){
+    var filter=this.dataset.filter;
+    var btns=document.querySelectorAll('.gf-btn');
+    var items=document.querySelectorAll('.gallery-item');
+    btns.forEach(function(b){b.classList.remove('active');});
+    var activeBtn=document.querySelector('.gf-btn[data-filter="'+filter+'"]');
+    if(activeBtn)activeBtn.classList.add('active');
+    items.forEach(function(item){item.classList.toggle('hidden',item.dataset.cat!==filter);});
+    document.getElementById('portfolio').scrollIntoView({behavior:'smooth',block:'start'});
+  });
 });
 </script>
 </body>
