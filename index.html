@@ -1031,19 +1031,29 @@ document.querySelectorAll('.gallery-item').forEach(function(card){
   },{passive:true});
 });
 
-// Service card click → scroll to gallery + apply filter
+// Service card click → open new tab with gallery filtered for that service
 document.querySelectorAll('.svc-card[data-filter]').forEach(function(card){
   card.addEventListener('click',function(){
-    var filter=this.dataset.filter;
-    var btns=document.querySelectorAll('.gf-btn');
-    var items=document.querySelectorAll('.gallery-item');
-    btns.forEach(function(b){b.classList.remove('active');});
-    var activeBtn=document.querySelector('.gf-btn[data-filter="'+filter+'"]');
-    if(activeBtn)activeBtn.classList.add('active');
-    items.forEach(function(item){item.classList.toggle('hidden',item.dataset.cat!==filter);});
-    document.getElementById('portfolio').scrollIntoView({behavior:'smooth',block:'start'});
+    window.open('index.html?filter='+this.dataset.filter+'#portfolio','_blank');
   });
 });
+
+// On page load: if ?filter= param exists, apply gallery filter and scroll to portfolio
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var filter=params.get('filter');
+  if(!filter)return;
+  var btns=document.querySelectorAll('.gf-btn');
+  var items=document.querySelectorAll('.gallery-item');
+  btns.forEach(function(b){b.classList.remove('active');});
+  var activeBtn=document.querySelector('.gf-btn[data-filter="'+filter+'"]');
+  if(activeBtn)activeBtn.classList.add('active');
+  items.forEach(function(item){item.classList.toggle('hidden',item.dataset.cat!==filter);});
+  setTimeout(function(){
+    var sec=document.getElementById('portfolio');
+    if(sec)sec.scrollIntoView({behavior:'smooth',block:'start'});
+  },500);
+})();
 </script>
 </body>
 </html>
