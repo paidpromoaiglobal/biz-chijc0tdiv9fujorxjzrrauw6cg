@@ -667,7 +667,6 @@ function doLogin(){
       <div>
         <div class="sec-label"><span>YouTube &amp; Instagram</span></div>
         <h2 class="sec-h2">Follow Our <em>Work</em></h2>
-        <p style="color:rgba(255,255,255,.4);font-size:.82rem;margin-top:4px">Latest 6 updates — auto-refreshed every visit</p>
       </div>
       <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
         <a href="https://www.instagram.com/gspaceinteriors/" target="_blank" rel="noopener" class="follow-btn">
@@ -1090,35 +1089,16 @@ document.querySelectorAll('.svc-card[data-filter]').forEach(function(card){
     });
 })();
 
-// ── INSTAGRAM LIVE FEED ────────────────────────────────────────────────────
+// ── INSTAGRAM ─────────────────────────────────────────────────────────────
 (function(){
   var el=document.getElementById('ig-feed');
   if(!el)return;
   var IG_SVG='<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>';
   var IG_FOLLOW_ICON='<svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" fill="#111"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#111" stroke-width="2"/></svg>';
-  function showFallback(){
-    el.innerHTML='<div class="ig-fallback">'+IG_SVG+
-      '<p>Follow us on Instagram to see our latest projects &amp; reels</p>'+
-      '<a href="https://www.instagram.com/gspaceinteriors/" target="_blank" rel="noopener" class="follow-btn" style="display:inline-flex;margin:0 auto">'+
-      IG_FOLLOW_ICON+' @gspaceinteriors</a></div>';
-  }
-  var proxy='https://api.allorigins.win/get?url='+encodeURIComponent('https://www.instagram.com/gspaceinteriors/?__a=1&__d=dis');
-  fetch(proxy,{cache:'no-cache'})
-    .then(function(r){return r.json();})
-    .then(function(d){
-      var j=JSON.parse(d.contents);
-      var edges=j.graphql.user.edge_owner_to_timeline_media.edges;
-      if(!edges||!edges.length)throw 0;
-      el.innerHTML=edges.slice(0,6).map(function(e){
-        var n=e.node;
-        var url='https://www.instagram.com/p/'+n.shortcode+'/';
-        var img=n.thumbnail_resources&&n.thumbnail_resources[2]?n.thumbnail_resources[2].src:n.display_url;
-        return '<a href="'+url+'" target="_blank" rel="noopener" class="dyn-card">'+
-          '<div class="dyn-thumb sq"><img src="'+img+'" alt="G-Space Interiors" loading="lazy">'+
-          '<div class="dyn-play">'+IG_SVG+'</div></div></a>';
-      }).join('');
-    })
-    .catch(showFallback);
+  el.innerHTML='<div class="ig-fallback">'+IG_SVG+
+    '<p>Follow us on Instagram to see our latest projects &amp; reels</p>'+
+    '<a href="https://www.instagram.com/gspaceinteriors/" target="_blank" rel="noopener" class="follow-btn" style="display:inline-flex;margin:0 auto">'+
+    IG_FOLLOW_ICON+' @gspaceinteriors</a></div>';
 })();
 </script>
 </body>
